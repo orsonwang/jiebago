@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/wangbin/jiebago"
+	"jiebago"
 )
 
 type line struct {

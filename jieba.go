@@ -6,9 +6,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/wangbin/jiebago/dictionary"
-	"github.com/wangbin/jiebago/finalseg"
-	"github.com/wangbin/jiebago/util"
+	"jiebago/dictionary"
+	"jiebago/finalseg"
+	"jiebago/util"
 )
 
 var (
@@ -49,9 +49,9 @@ If a word should not be further cutted, for example word "石墨烯" should not 
 cutted into "石墨" and "烯", SuggestFrequency("石墨烯") will return the maximu
 frequency for this word.
 
-If a word should be further cutted, for example word "今天天气" should be
-further cutted into two words "今天" and "天气",  SuggestFrequency("今天", "天气")
-should return the minimum frequency for word "今天天气".
+If a word should be further cutted, for example word "今天天氣" should be
+further cutted into two words "今天" and "天氣",  SuggestFrequency("今天", "天氣")
+should return the minimum frequency for word "今天天氣".
 */
 func (seg *Segmenter) SuggestFrequency(words ...string) float64 {
 	frequency := 1.0

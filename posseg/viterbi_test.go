@@ -51,7 +51,7 @@ func init() {
 }
 
 func TestViterbi(t *testing.T) {
-	ss := "李小福是创新办主任也是云计算方面的专家;"
+	ss := "李小福是創新辦主任也是雲計算方面的專家;"
 	route := viterbi([]rune(ss))
 	if len(route) != len(defaultRoute) {
 		t.Fatal(len(route))
@@ -64,7 +64,7 @@ func TestViterbi(t *testing.T) {
 }
 
 func BenchmarkViterbi(b *testing.B) {
-	ss := "李小福是创新办主任也是云计算方面的专家;"
+	ss := "李小福是創新辦主任也是雲計算方面的專家;"
 	for i := 0; i < b.N; i++ {
 		viterbi([]rune(ss))
 	}

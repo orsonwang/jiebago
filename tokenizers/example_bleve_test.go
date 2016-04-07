@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/blevesearch/bleve"
-	_ "github.com/wangbin/jiebago/tokenizers"
+	"jiebago/tokenizers"
 )
 
 func Example_beleveSearch() {
@@ -57,19 +57,19 @@ func Example_beleveSearch() {
 		},
 		{
 			Title: "Doc 2",
-			Name:  "The second one 你 中文测试中文 is even more interesting! 吃水果",
+			Name:  "The second one 你 中文測試中文 is even more interesting! 吃水果",
 		},
 		{
 			Title: "Doc 3",
-			Name:  "买水果然后来世博园。",
+			Name:  "買水果然後來世博園。",
 		},
 		{
 			Title: "Doc 4",
-			Name:  "工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作",
+			Name:  "工信處女幹事每月經過下屬科室都要親口交代24口交換機等技術性器件的安裝工作",
 		},
 		{
 			Title: "Doc 5",
-			Name:  "咱俩交换一下吧。",
+			Name:  "咱倆交換一下吧。",
 		},
 	}
 	// index docs
@@ -78,7 +78,7 @@ func Example_beleveSearch() {
 	}
 
 	// search for some text
-	for _, keyword := range []string{"水果世博园", "你", "first", "中文", "交换机", "交换"} {
+	for _, keyword := range []string{"水果世博園", "你", "first", "中文", "交換機", "交換"} {
 		query := bleve.NewQueryStringQuery(keyword)
 		search := bleve.NewSearchRequest(query)
 		search.Highlight = bleve.NewHighlight()
@@ -99,28 +99,28 @@ func Example_beleveSearch() {
 		}
 	}
 	// Output:
-	// Result of "水果世博园": 2 matches:
+	// Result of "水果世博園": 2 matches:
 	// 1. Doc 3, (1.099550)
-	// Name: 买<span class="highlight">水果</span>然后来<span class="highlight">世博</span>园。
+	// Name: 買<span class="highlight">水果</span>然後來<span class="highlight">世博</span>園。
 	// 2. Doc 2, (0.031941)
-	// Name: The second one 你 中文测试中文 is even more interesting! 吃<span class="highlight">水果</span>
+	// Name: The second one 你 中文測試中文 is even more interesting! 吃<span class="highlight">水果</span>
 	// Result of "你": 1 matches:
 	// 1. Doc 2, (0.391161)
-	// Name: The second one <span class="highlight">你</span> 中文测试中文 is even more interesting! 吃水果
+	// Name: The second one <span class="highlight">你</span> 中文測試中文 is even more interesting! 吃水果
 	// Result of "first": 1 matches:
 	// 1. Doc 1, (0.512150)
 	// Name: This is the <span class="highlight">first</span> document we’ve added
 	// Result of "中文": 1 matches:
 	// 1. Doc 2, (0.553186)
-	// Name: The second one 你 <span class="highlight">中文</span>测试<span class="highlight">中文</span> is even more interesting! 吃水果
-	// Result of "交换机": 2 matches:
+	// Name: The second one 你 <span class="highlight">中文</span>測試<span class="highlight">中文</span> is even more interesting! 吃水果
+	// Result of "交換機": 2 matches:
 	// 1. Doc 4, (0.608495)
-	// Name: 工信处女干事每月经过下属科室都要亲口交代24口<span class="highlight">交换机</span>等技术性器件的安装工作
+	// Name: 工信處女幹事每月經過下屬科室都要親口交代24口<span class="highlight">交換機</span>等技術性器件的安裝工作
 	// 2. Doc 5, (0.086700)
-	// Name: 咱俩<span class="highlight">交换</span>一下吧。
-	// Result of "交换": 2 matches:
+	// Name: 咱倆<span class="highlight">交換</span>一下吧。
+	// Result of "交換": 2 matches:
 	// 1. Doc 5, (0.534158)
-	// Name: 咱俩<span class="highlight">交换</span>一下吧。
+	// Name: 咱倆<span class="highlight">交換</span>一下吧。
 	// 2. Doc 4, (0.296297)
-	// Name: 工信处女干事每月经过下属科室都要亲口交代24口<span class="highlight">交换</span>机等技术性器件的安装工作
+	// Name: 工信處女幹事每月經過下屬科室都要親口交代24口<span class="highlight">交換</span>機等技術性器件的安裝工作
 }

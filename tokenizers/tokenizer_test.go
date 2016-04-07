@@ -13,26 +13,26 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 		output analysis.TokenStream
 	}{
 		{
-			[]byte("这是一个伸手不见五指的黑夜。我叫孙悟空，我爱北京，我爱Python和C++。"),
+			[]byte("這是一個伸手不見五指的黑夜。我叫孫悟空，我愛北京，我愛Python和C++。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("这是"),
+					Term:     []byte("這是"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      30,
-					Term:     []byte("伸手不见五指"),
+					Term:     []byte("伸手不見五指"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -74,7 +74,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      57,
-					Term:     []byte("孙悟空"),
+					Term:     []byte("孫悟空"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -95,7 +95,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      66,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -123,7 +123,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      81,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -158,7 +158,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我不喜欢日本和服。"),
+			[]byte("我不喜歡日本和服。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -177,7 +177,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -205,7 +205,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("雷猴回归人间。"),
+			[]byte("雷猴回歸人間。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -217,14 +217,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("回归"),
+					Term:     []byte("回歸"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("人间"),
+					Term:     []byte("人間"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -238,19 +238,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作"),
+			[]byte("工信處女幹事每月經過下屬科室都要親口交代24口交換機等技術性器件的安裝工作"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("工信处"),
+					Term:     []byte("工信處"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("女干事"),
+					Term:     []byte("女幹事"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -264,14 +264,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("经过"),
+					Term:     []byte("經過"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("下属"),
+					Term:     []byte("下屬"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -299,7 +299,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      54,
-					Term:     []byte("亲口"),
+					Term:     []byte("親口"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -327,7 +327,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    65,
 					End:      74,
-					Term:     []byte("交换机"),
+					Term:     []byte("交換機"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -341,7 +341,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    77,
 					End:      86,
-					Term:     []byte("技术性"),
+					Term:     []byte("技術性"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -362,7 +362,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    95,
 					End:      101,
-					Term:     []byte("安装"),
+					Term:     []byte("安裝"),
 					Position: 18,
 					Type:     analysis.Ideographic,
 				},
@@ -402,7 +402,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("永和服装饰品有限公司"),
+			[]byte("永和服裝飾品有限公司"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -414,14 +414,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("饰品"),
+					Term:     []byte("飾品"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -435,7 +435,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我爱北京天安门"),
+			[]byte("我愛北京天安門"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -447,7 +447,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -461,7 +461,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("天安门"),
+					Term:     []byte("天安門"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -480,26 +480,26 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("隐马尔可夫"),
+			[]byte("隱馬爾可夫"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("隐"),
+					Term:     []byte("隱"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    3,
 					End:      15,
-					Term:     []byte("马尔可夫"),
+					Term:     []byte("馬爾可夫"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("雷猴是个好网站"),
+			[]byte("雷猴是個好網站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -518,7 +518,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -532,19 +532,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("网站"),
+					Term:     []byte("網站"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("“Microsoft”一词由“MICROcomputer（微型计算机）”和“SOFTware（软件）”两部分组成"),
+			[]byte("「Microsoft」一詞由「MICROcomputer（微型計算機）」和「SOFTware（軟件）」兩部分組成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 1,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -558,14 +558,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 3,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("一词"),
+					Term:     []byte("一詞"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -579,7 +579,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 6,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -607,7 +607,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    49,
 					End:      58,
-					Term:     []byte("计算机"),
+					Term:     []byte("計算機"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -621,7 +621,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      64,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 12,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -635,7 +635,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    67,
 					End:      70,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 14,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -656,7 +656,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    81,
 					End:      87,
-					Term:     []byte("软件"),
+					Term:     []byte("軟件"),
 					Position: 17,
 					Type:     analysis.Ideographic,
 				},
@@ -670,14 +670,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    90,
 					End:      93,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 19,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    93,
 					End:      96,
-					Term:     []byte("两"),
+					Term:     []byte("兩"),
 					Position: 20,
 					Type:     analysis.Ideographic,
 				},
@@ -691,19 +691,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    102,
 					End:      108,
-					Term:     []byte("组成"),
+					Term:     []byte("組成"),
 					Position: 22,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("草泥马和欺实马是今年的流行词汇"),
+			[]byte("草泥馬和欺實馬是今年的流行詞彙"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("草泥马"),
+					Term:     []byte("草泥馬"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -717,14 +717,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("欺实"),
+					Term:     []byte("欺實"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("马"),
+					Term:     []byte("馬"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -759,14 +759,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("词汇"),
+					Term:     []byte("詞彙"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("伊藤洋华堂总府店"),
+			[]byte("伊藤洋華堂總府店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -778,14 +778,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      15,
-					Term:     []byte("洋华堂"),
+					Term:     []byte("洋華堂"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("总府"),
+					Term:     []byte("總府"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -799,45 +799,45 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国科学院计算技术研究所"),
+			[]byte("中國科學院計算技術研究所"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      36,
-					Term:     []byte("中国科学院计算技术研究所"),
+					Term:     []byte("中國科學院計算技術研究所"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("罗密欧与朱丽叶"),
+			[]byte("羅密歐與朱麗葉"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("罗密欧"),
+					Term:     []byte("羅密歐"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("与"),
+					Term:     []byte("與"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("朱丽叶"),
+					Term:     []byte("朱麗葉"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我购买了道具和服装"),
+			[]byte("我購買了道具和服裝"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -849,7 +849,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("购买"),
+					Term:     []byte("購買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -877,14 +877,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("PS: 我觉得开源有一个好处，就是能够敦促自己不断改进，避免敞帚自珍"),
+			[]byte("PS: 我覺得開源有一個好處，就是能夠敦促自己不斷改進，避免敞帚自珍"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -917,14 +917,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    7,
 					End:      13,
-					Term:     []byte("觉得"),
+					Term:     []byte("覺得"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("开源"),
+					Term:     []byte("開源"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -938,14 +938,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    28,
 					End:      34,
-					Term:     []byte("好处"),
+					Term:     []byte("好處"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -966,7 +966,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    43,
 					End:      49,
-					Term:     []byte("能够"),
+					Term:     []byte("能夠"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -987,7 +987,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      73,
-					Term:     []byte("不断改进"),
+					Term:     []byte("不斷改進"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -1060,12 +1060,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("总经理完成了这件事情"),
+			[]byte("總經理完成了這件事情"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("总经理"),
+					Term:     []byte("總經理"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1086,7 +1086,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -1100,12 +1100,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("电脑修好了"),
+			[]byte("電腦修好了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("电脑"),
+					Term:     []byte("電腦"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1126,7 +1126,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("做好了这件事情就一了百了了"),
+			[]byte("做好了這件事情就一了百了了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1145,7 +1145,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -1180,19 +1180,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("人们审美的观点是不同的"),
+			[]byte("人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -1206,7 +1206,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -1234,19 +1234,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我们买了一个美的空调"),
+			[]byte("我們買了一個美的空調"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -1260,7 +1260,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -1274,19 +1274,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("空调"),
+					Term:     []byte("空調"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("线程初始化时我们要注意"),
+			[]byte("線程初始化時我們要注意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("线程"),
+					Term:     []byte("線程"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1300,14 +1300,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -1328,12 +1328,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一个分子是由好多原子组织成的"),
+			[]byte("一個分子是由好多原子組織成的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1375,7 +1375,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("组织"),
+					Term:     []byte("組織"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -1396,7 +1396,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("祝你马到功成"),
+			[]byte("祝你馬到功成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1415,14 +1415,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      18,
-					Term:     []byte("马到功成"),
+					Term:     []byte("馬到功成"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("他掉进了无底洞里"),
+			[]byte("他掉進了無底洞里"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1441,7 +1441,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("进"),
+					Term:     []byte("進"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -1455,7 +1455,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("无底洞"),
+					Term:     []byte("無底洞"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -1469,12 +1469,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国的首都是北京"),
+			[]byte("中國的首都是北京"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1509,19 +1509,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("孙君意"),
+			[]byte("孫君意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("孙君意"),
+					Term:     []byte("孫君意"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("外交部发言人马朝旭"),
+			[]byte("外交部發言人馬朝旭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1533,33 +1533,33 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("发言人"),
+					Term:     []byte("發言人"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("马朝旭"),
+					Term:     []byte("馬朝旭"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("领导人会议和第四届东亚峰会"),
+			[]byte("領導人會議和第四屆東亞峰會"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("领导人"),
+					Term:     []byte("領導人"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("会议"),
+					Term:     []byte("會議"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -1573,28 +1573,28 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("第四届"),
+					Term:     []byte("第四屆"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("东亚"),
+					Term:     []byte("東亞"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("峰会"),
+					Term:     []byte("峰會"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("在过去的这五年"),
+			[]byte("在過去的這五年"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1606,7 +1606,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("过去"),
+					Term:     []byte("過去"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -1620,7 +1620,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("这"),
+					Term:     []byte("這"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -1634,12 +1634,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("还需要很长的路要走"),
+			[]byte("還需要很長的路要走"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1653,7 +1653,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("很长"),
+					Term:     []byte("很長"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -1688,7 +1688,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("60周年首都阅兵"),
+			[]byte("60週年首都閱兵"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1700,7 +1700,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      8,
-					Term:     []byte("周年"),
+					Term:     []byte("週年"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -1714,14 +1714,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    14,
 					End:      20,
-					Term:     []byte("阅兵"),
+					Term:     []byte("閱兵"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("你好人们审美的观点是不同的"),
+			[]byte("你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1733,14 +1733,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -1754,7 +1754,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -1782,12 +1782,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("买水果然后来世博园"),
+			[]byte("買水果然後來世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1801,33 +1801,33 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("买水果然后去世博园"),
+			[]byte("買水果然後去世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -1841,7 +1841,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -1855,14 +1855,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("但是后来我才知道你是对的"),
+			[]byte("但是後來我才知道你是對的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -1874,7 +1874,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -1916,7 +1916,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("对"),
+					Term:     []byte("對"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -2066,7 +2066,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("I love你，不以为耻，反以为rong"),
+			[]byte("I love你，不以為恥，反以為rong"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2106,7 +2106,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      24,
-					Term:     []byte("不以为耻"),
+					Term:     []byte("不以為恥"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -2127,7 +2127,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("以为"),
+					Term:     []byte("以為"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -2157,7 +2157,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2176,14 +2176,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -2197,7 +2197,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -2225,7 +2225,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("很好但主要是基于网页形式"),
+			[]byte("很好但主要是基於網頁形式"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2265,14 +2265,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("基于"),
+					Term:     []byte("基於"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("网页"),
+					Term:     []byte("網頁"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -2286,7 +2286,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2305,14 +2305,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -2326,7 +2326,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -2354,12 +2354,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("为什么我不能拥有想要的生活"),
+			[]byte("為什麼我不能擁有想要的生活"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("为什么"),
+					Term:     []byte("為什麼"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -2380,7 +2380,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("拥有"),
+					Term:     []byte("擁有"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -2408,12 +2408,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("后来我才"),
+			[]byte("後來我才"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -2434,7 +2434,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("此次来中国是为了"),
+			[]byte("此次來中國是為了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2446,14 +2446,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -2467,14 +2467,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("使用了它就可以解决一些问题"),
+			[]byte("使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2514,7 +2514,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -2528,14 +2528,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte(",使用了它就可以解决一些问题"),
+			[]byte(",使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2582,7 +2582,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -2596,19 +2596,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    34,
 					End:      40,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("其实使用了它就可以解决一些问题"),
+			[]byte("其實使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("其实"),
+					Term:     []byte("其實"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -2650,7 +2650,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -2664,14 +2664,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("好人使用了它就可以解决一些问题"),
+			[]byte("好人使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2718,7 +2718,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -2732,19 +2732,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("是因为和国家"),
+			[]byte("是因為和國家"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("是因为"),
+					Term:     []byte("是因為"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -2758,14 +2758,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("国家"),
+					Term:     []byte("國家"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("老年搜索还支持"),
+			[]byte("老年搜索還支持"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -2784,7 +2784,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -2798,12 +2798,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("干脆就把那部蒙人的闲法给废了拉倒！RT @laoshipukong : 27日，全国人大常委会第三次审议侵权责任法草案，删除了有关医疗损害责任“举证倒置”的规定。在医患纠纷中本已处于弱势地位的消费者由此将陷入万劫不复的境地。 "),
+			[]byte("乾脆就把那部蒙人的閒法給廢了拉倒！RT @laoshipukong : 27日，全國人大常委會第三次審議侵權責任法草案，刪除了有關醫療損害責任「舉證倒置」的規定。在醫患糾紛中本已處於弱勢地位的消費者由此將陷入萬劫不復的境地。 "),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("干脆"),
+					Term:     []byte("乾脆"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -2845,21 +2845,21 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("闲法"),
+					Term:     []byte("閒法"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    33,
 					End:      36,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    36,
 					End:      39,
-					Term:     []byte("废"),
+					Term:     []byte("廢"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -2957,7 +2957,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      99,
-					Term:     []byte("全国人大常委会"),
+					Term:     []byte("全國人大常委會"),
 					Position: 23,
 					Type:     analysis.Ideographic,
 				},
@@ -2971,21 +2971,21 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    108,
 					End:      114,
-					Term:     []byte("审议"),
+					Term:     []byte("審議"),
 					Position: 25,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    114,
 					End:      120,
-					Term:     []byte("侵权"),
+					Term:     []byte("侵權"),
 					Position: 26,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    120,
 					End:      129,
-					Term:     []byte("责任法"),
+					Term:     []byte("責任法"),
 					Position: 27,
 					Type:     analysis.Ideographic,
 				},
@@ -3006,7 +3006,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    138,
 					End:      144,
-					Term:     []byte("删除"),
+					Term:     []byte("刪除"),
 					Position: 30,
 					Type:     analysis.Ideographic,
 				},
@@ -3020,42 +3020,42 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    147,
 					End:      153,
-					Term:     []byte("有关"),
+					Term:     []byte("有關"),
 					Position: 32,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    153,
 					End:      159,
-					Term:     []byte("医疗"),
+					Term:     []byte("醫療"),
 					Position: 33,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    159,
 					End:      165,
-					Term:     []byte("损害"),
+					Term:     []byte("損害"),
 					Position: 34,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    165,
 					End:      171,
-					Term:     []byte("责任"),
+					Term:     []byte("責任"),
 					Position: 35,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    171,
 					End:      174,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 36,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    174,
 					End:      180,
-					Term:     []byte("举证"),
+					Term:     []byte("舉證"),
 					Position: 37,
 					Type:     analysis.Ideographic,
 				},
@@ -3069,7 +3069,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    186,
 					End:      189,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 39,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -3083,7 +3083,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    192,
 					End:      198,
-					Term:     []byte("规定"),
+					Term:     []byte("規定"),
 					Position: 41,
 					Type:     analysis.Ideographic,
 				},
@@ -3104,14 +3104,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    204,
 					End:      210,
-					Term:     []byte("医患"),
+					Term:     []byte("醫患"),
 					Position: 44,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    210,
 					End:      216,
-					Term:     []byte("纠纷"),
+					Term:     []byte("糾紛"),
 					Position: 45,
 					Type:     analysis.Ideographic,
 				},
@@ -3132,14 +3132,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    225,
 					End:      231,
-					Term:     []byte("处于"),
+					Term:     []byte("處於"),
 					Position: 48,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    231,
 					End:      237,
-					Term:     []byte("弱势"),
+					Term:     []byte("弱勢"),
 					Position: 49,
 					Type:     analysis.Ideographic,
 				},
@@ -3160,7 +3160,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    246,
 					End:      255,
-					Term:     []byte("消费者"),
+					Term:     []byte("消費者"),
 					Position: 52,
 					Type:     analysis.Ideographic,
 				},
@@ -3174,7 +3174,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    261,
 					End:      264,
-					Term:     []byte("将"),
+					Term:     []byte("將"),
 					Position: 54,
 					Type:     analysis.Ideographic,
 				},
@@ -3188,7 +3188,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    270,
 					End:      282,
-					Term:     []byte("万劫不复"),
+					Term:     []byte("萬劫不復"),
 					Position: 56,
 					Type:     analysis.Ideographic,
 				},
@@ -3239,7 +3239,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("他说的确实在理"),
+			[]byte("他說的確實在理"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -3251,7 +3251,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -3265,7 +3265,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("确实"),
+					Term:     []byte("確實"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -3279,45 +3279,45 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春节讲话"),
+			[]byte("長春市長春節講話"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("市长"),
+					Term:     []byte("市長"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("春节"),
+					Term:     []byte("春節"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("讲话"),
+					Term:     []byte("講話"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("结婚的和尚未结婚的"),
+			[]byte("結婚的和尚未結婚的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3345,7 +3345,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -3359,12 +3359,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("结合成分子时"),
+			[]byte("結合成分子時"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结合"),
+					Term:     []byte("結合"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3385,19 +3385,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("旅游和服务是最好的"),
+			[]byte("旅遊和服務是最好的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("旅游"),
+					Term:     []byte("旅遊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3411,7 +3411,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("服务"),
+					Term:     []byte("服務"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -3439,12 +3439,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("这件事情的确是我的错"),
+			[]byte("這件事情的確是我的錯"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3458,7 +3458,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("的确"),
+					Term:     []byte("的確"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -3486,14 +3486,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      30,
-					Term:     []byte("错"),
+					Term:     []byte("錯"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("供大家参考指正"),
+			[]byte("供大家參考指正"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -3512,7 +3512,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("参考"),
+					Term:     []byte("參考"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -3526,12 +3526,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("哈尔滨政府公布塌桥原因"),
+			[]byte("哈爾濱政府公佈塌橋原因"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("哈尔滨"),
+					Term:     []byte("哈爾濱"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3545,14 +3545,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("公布"),
+					Term:     []byte("公佈"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("塌桥"),
+					Term:     []byte("塌橋"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -3566,7 +3566,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我在机场入口处"),
+			[]byte("我在機場入口處"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -3585,21 +3585,21 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("机场"),
+					Term:     []byte("機場"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("入口处"),
+					Term:     []byte("入口處"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邢永臣摄影报道"),
+			[]byte("邢永臣攝影報道"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -3611,21 +3611,21 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("摄影"),
+					Term:     []byte("攝影"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("报道"),
+					Term:     []byte("報道"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("BP神经网络如何训练才能在分类时增加区分度？"),
+			[]byte("BP神經網絡如何訓練才能在分類時增加區分度？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -3637,7 +3637,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      14,
-					Term:     []byte("神经网络"),
+					Term:     []byte("神經網絡"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -3651,7 +3651,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    20,
 					End:      26,
-					Term:     []byte("训练"),
+					Term:     []byte("訓練"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -3672,14 +3672,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    35,
 					End:      41,
-					Term:     []byte("分类"),
+					Term:     []byte("分類"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    41,
 					End:      44,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -3693,7 +3693,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    50,
 					End:      59,
-					Term:     []byte("区分度"),
+					Term:     []byte("區分度"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -3707,7 +3707,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("南京市长江大桥"),
+			[]byte("南京市長江大橋"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -3719,19 +3719,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      21,
-					Term:     []byte("长江大桥"),
+					Term:     []byte("長江大橋"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("应一些使用者的建议，也为了便于利用NiuTrans用于SMT研究"),
+			[]byte("應一些使用者的建議，也為了便於利用NiuTrans用於SMT研究"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("应"),
+					Term:     []byte("應"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3759,7 +3759,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("建议"),
+					Term:     []byte("建議"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -3780,14 +3780,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("便于"),
+					Term:     []byte("便於"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -3808,7 +3808,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    59,
 					End:      65,
-					Term:     []byte("用于"),
+					Term:     []byte("用於"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -3829,38 +3829,38 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春药店"),
+			[]byte("長春市長春藥店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("长春市"),
+					Term:     []byte("長春市"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("药店"),
+					Term:     []byte("藥店"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邓颖超生前最喜欢的衣服"),
+			[]byte("鄧穎超生前最喜歡的衣服"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("邓颖超"),
+					Term:     []byte("鄧穎超"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3881,7 +3881,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -3902,12 +3902,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("胡锦涛是热爱世界和平的政治局常委"),
+			[]byte("胡錦濤是熱愛世界和平的政治局常委"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("胡锦涛"),
+					Term:     []byte("胡錦濤"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3921,7 +3921,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("热爱"),
+					Term:     []byte("熱愛"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -3963,12 +3963,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("程序员祝海林和朱会震是在孙健的左面和右面, 范凯在最右面.再往左是李松洪"),
+			[]byte("程序員祝海林和朱會震是在孫健的左面和右面, 範凱在最右面.再往左是李松洪"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("程序员"),
+					Term:     []byte("程序員"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -3996,7 +3996,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      30,
-					Term:     []byte("朱会震"),
+					Term:     []byte("朱會震"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -4017,7 +4017,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      42,
-					Term:     []byte("孙健"),
+					Term:     []byte("孫健"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -4066,7 +4066,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    62,
 					End:      68,
-					Term:     []byte("范凯"),
+					Term:     []byte("範凱"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -4129,7 +4129,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一次性交多少钱"),
+			[]byte("一次性交多少錢"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -4155,19 +4155,19 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("钱"),
+					Term:     []byte("錢"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("两块五一套，三块八一斤，四块七一本，五块六一条"),
+			[]byte("兩塊五一套，三塊八一斤，四塊七一本，五塊六一條"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("两块"),
+					Term:     []byte("兩塊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -4195,7 +4195,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("三块"),
+					Term:     []byte("三塊"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -4223,7 +4223,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      42,
-					Term:     []byte("四块"),
+					Term:     []byte("四塊"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -4251,7 +4251,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    54,
 					End:      60,
-					Term:     []byte("五块"),
+					Term:     []byte("五塊"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -4265,14 +4265,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("一条"),
+					Term:     []byte("一條"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("小和尚留了一个像大和尚一样的和尚头"),
+			[]byte("小和尚留了一個像大和尚一樣的和尚頭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -4305,7 +4305,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -4333,7 +4333,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("一样"),
+					Term:     []byte("一樣"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -4347,14 +4347,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      51,
-					Term:     []byte("和尚头"),
+					Term:     []byte("和尚頭"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我是中华人民共和国公民;我爸爸是共和党党员; 地铁和平门站"),
+			[]byte("我是中華人民共和國公民;我爸爸是共和黨黨員; 地鐵和平門站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -4373,7 +4373,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      27,
-					Term:     []byte("中华人民共和国"),
+					Term:     []byte("中華人民共和國"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -4415,14 +4415,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      55,
-					Term:     []byte("共和党"),
+					Term:     []byte("共和黨"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    55,
 					End:      61,
-					Term:     []byte("党员"),
+					Term:     []byte("黨員"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -4443,14 +4443,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("地铁"),
+					Term:     []byte("地鐵"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    69,
 					End:      78,
-					Term:     []byte("和平门"),
+					Term:     []byte("和平門"),
 					Position: 14,
 					Type:     analysis.Ideographic,
 				},
@@ -4464,12 +4464,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("张晓梅去人民医院做了个B超然后去买了件T恤"),
+			[]byte("張曉梅去人民醫院做了個B超然後去買了件T恤"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("张晓梅"),
+					Term:     []byte("張曉梅"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -4490,7 +4490,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("医院"),
+					Term:     []byte("醫院"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -4511,7 +4511,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -4525,7 +4525,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      43,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -4539,7 +4539,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      49,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -4567,7 +4567,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("AT&T是一件不错的公司，给你发offer了吗？"),
+			[]byte("AT&T是一件不錯的公司，給你發offer了嗎？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -4593,7 +4593,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("不错"),
+					Term:     []byte("不錯"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -4621,7 +4621,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    31,
 					End:      34,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -4635,7 +4635,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      40,
-					Term:     []byte("发"),
+					Term:     []byte("發"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -4656,7 +4656,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      51,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -4670,7 +4670,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("C++和c#是什么关系？11+122=133，是吗？PI=3.14159"),
+			[]byte("C++和c#是什麼關係？11+122=133，是嗎？PI=3.14159"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -4703,14 +4703,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("什么"),
+					Term:     []byte("什麼"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("关系"),
+					Term:     []byte("關係"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -4773,7 +4773,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      45,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -4808,7 +4808,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("你认识那个和主席握手的的哥吗？他开一辆黑色的士。"),
+			[]byte("你認識那個和主席握手的的哥嗎？他開一輛黑色的士。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -4820,14 +4820,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("认识"),
+					Term:     []byte("認識"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("那个"),
+					Term:     []byte("那個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -4869,7 +4869,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -4883,14 +4883,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    45,
 					End:      51,
-					Term:     []byte("他开"),
+					Term:     []byte("他開"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    51,
 					End:      57,
-					Term:     []byte("一辆"),
+					Term:     []byte("一輛"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -4918,12 +4918,12 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("枪杆子中出政权"),
+			[]byte("槍桿子中出政權"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("枪杆子"),
+					Term:     []byte("槍桿子"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -4944,26 +4944,26 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("政权"),
+					Term:     []byte("政權"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("张三风同学走上了不归路"),
+			[]byte("張三風同學走上了不歸路"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("张三风"),
+					Term:     []byte("張三風"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("同学"),
+					Term:     []byte("同學"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -4984,14 +4984,14 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      33,
-					Term:     []byte("不归路"),
+					Term:     []byte("不歸路"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("阿Q腰间挂着BB机手里拿着大哥大，说：我一般吃饭不AA制的。"),
+			[]byte("阿Q腰間掛著BB機手裡拿著大哥大，說：我一般吃飯不AA制的。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5003,35 +5003,35 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    4,
 					End:      10,
-					Term:     []byte("腰间"),
+					Term:     []byte("腰間"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    10,
 					End:      13,
-					Term:     []byte("挂"),
+					Term:     []byte("掛"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    16,
 					End:      21,
-					Term:     []byte("BB机"),
+					Term:     []byte("BB機"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("手里"),
+					Term:     []byte("手裡"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -5045,7 +5045,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -5066,7 +5066,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    45,
 					End:      48,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -5094,7 +5094,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    60,
 					End:      66,
-					Term:     []byte("吃饭"),
+					Term:     []byte("吃飯"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -5129,7 +5129,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("在1号店能买到小S和大S八卦的书。"),
+			[]byte("在1號店能買到小S和大S八卦的書。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5141,7 +5141,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      10,
-					Term:     []byte("1号店"),
+					Term:     []byte("1號店"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -5155,7 +5155,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -5204,7 +5204,7 @@ func TestJiebaTokenizerDefaultModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("书"),
+					Term:     []byte("書"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -5235,19 +5235,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 		output analysis.TokenStream
 	}{
 		{
-			[]byte("这是一个伸手不见五指的黑夜。我叫孙悟空，我爱北京，我爱Python和C++。"),
+			[]byte("這是一個伸手不見五指的黑夜。我叫孫悟空，我愛北京，我愛Python和C++。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("这是"),
+					Term:     []byte("這是"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -5261,7 +5261,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("不见"),
+					Term:     []byte("不見"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -5275,7 +5275,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      30,
-					Term:     []byte("伸手不见五指"),
+					Term:     []byte("伸手不見五指"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -5324,7 +5324,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      57,
-					Term:     []byte("孙悟空"),
+					Term:     []byte("孫悟空"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -5345,7 +5345,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      66,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -5373,7 +5373,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      81,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 20,
 					Type:     analysis.Ideographic,
 				},
@@ -5408,7 +5408,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我不喜欢日本和服。"),
+			[]byte("我不喜歡日本和服。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5427,7 +5427,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -5455,7 +5455,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("雷猴回归人间。"),
+			[]byte("雷猴回歸人間。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5467,14 +5467,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("回归"),
+					Term:     []byte("回歸"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("人间"),
+					Term:     []byte("人間"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -5488,26 +5488,26 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作"),
+			[]byte("工信處女幹事每月經過下屬科室都要親口交代24口交換機等技術性器件的安裝工作"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("工信处"),
+					Term:     []byte("工信處"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("干事"),
+					Term:     []byte("幹事"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("女干事"),
+					Term:     []byte("女幹事"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -5521,14 +5521,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("经过"),
+					Term:     []byte("經過"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("下属"),
+					Term:     []byte("下屬"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -5556,7 +5556,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      54,
-					Term:     []byte("亲口"),
+					Term:     []byte("親口"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -5584,21 +5584,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    65,
 					End:      71,
-					Term:     []byte("交换"),
+					Term:     []byte("交換"),
 					Position: 14,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    68,
 					End:      74,
-					Term:     []byte("换机"),
+					Term:     []byte("換機"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    65,
 					End:      74,
-					Term:     []byte("交换机"),
+					Term:     []byte("交換機"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -5612,14 +5612,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    77,
 					End:      83,
-					Term:     []byte("技术"),
+					Term:     []byte("技術"),
 					Position: 18,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    77,
 					End:      86,
-					Term:     []byte("技术性"),
+					Term:     []byte("技術性"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
@@ -5640,7 +5640,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    95,
 					End:      101,
-					Term:     []byte("安装"),
+					Term:     []byte("安裝"),
 					Position: 22,
 					Type:     analysis.Ideographic,
 				},
@@ -5694,7 +5694,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("永和服装饰品有限公司"),
+			[]byte("永和服裝飾品有限公司"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5706,14 +5706,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("饰品"),
+					Term:     []byte("飾品"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -5741,7 +5741,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我爱北京天安门"),
+			[]byte("我愛北京天安門"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5753,7 +5753,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -5774,7 +5774,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("天安门"),
+					Term:     []byte("天安門"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -5793,12 +5793,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("隐马尔可夫"),
+			[]byte("隱馬爾可夫"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("隐"),
+					Term:     []byte("隱"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -5812,21 +5812,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      12,
-					Term:     []byte("马尔可"),
+					Term:     []byte("馬爾可"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    3,
 					End:      15,
-					Term:     []byte("马尔可夫"),
+					Term:     []byte("馬爾可夫"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("雷猴是个好网站"),
+			[]byte("雷猴是個好網站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -5845,7 +5845,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -5859,19 +5859,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("网站"),
+					Term:     []byte("網站"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("“Microsoft”一词由“MICROcomputer（微型计算机）”和“SOFTware（软件）”两部分组成"),
+			[]byte("「Microsoft」一詞由「MICROcomputer（微型計算機）」和「SOFTware（軟件）」兩部分組成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 1,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -5885,14 +5885,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 3,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("一词"),
+					Term:     []byte("一詞"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -5906,7 +5906,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 6,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -5934,21 +5934,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    49,
 					End:      55,
-					Term:     []byte("计算"),
+					Term:     []byte("計算"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    52,
 					End:      58,
-					Term:     []byte("算机"),
+					Term:     []byte("算機"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    49,
 					End:      58,
-					Term:     []byte("计算机"),
+					Term:     []byte("計算機"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -5962,7 +5962,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      64,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 14,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -5976,7 +5976,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    67,
 					End:      70,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 16,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -5997,7 +5997,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    81,
 					End:      87,
-					Term:     []byte("软件"),
+					Term:     []byte("軟件"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
@@ -6011,14 +6011,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    90,
 					End:      93,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 21,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    93,
 					End:      96,
-					Term:     []byte("两"),
+					Term:     []byte("兩"),
 					Position: 22,
 					Type:     analysis.Ideographic,
 				},
@@ -6032,19 +6032,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    102,
 					End:      108,
-					Term:     []byte("组成"),
+					Term:     []byte("組成"),
 					Position: 24,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("草泥马和欺实马是今年的流行词汇"),
+			[]byte("草泥馬和欺實馬是今年的流行詞彙"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("草泥马"),
+					Term:     []byte("草泥馬"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -6058,14 +6058,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("欺实"),
+					Term:     []byte("欺實"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("马"),
+					Term:     []byte("馬"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -6100,14 +6100,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("词汇"),
+					Term:     []byte("詞彙"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("伊藤洋华堂总府店"),
+			[]byte("伊藤洋華堂總府店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -6119,14 +6119,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      15,
-					Term:     []byte("洋华堂"),
+					Term:     []byte("洋華堂"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("总府"),
+					Term:     []byte("總府"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -6140,40 +6140,40 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国科学院计算技术研究所"),
+			[]byte("中國科學院計算技術研究所"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("科学"),
+					Term:     []byte("科學"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("学院"),
+					Term:     []byte("學院"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("计算"),
+					Term:     []byte("計算"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("技术"),
+					Term:     []byte("技術"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -6187,7 +6187,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      15,
-					Term:     []byte("科学院"),
+					Term:     []byte("科學院"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -6201,40 +6201,40 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    0,
 					End:      36,
-					Term:     []byte("中国科学院计算技术研究所"),
+					Term:     []byte("中國科學院計算技術研究所"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("罗密欧与朱丽叶"),
+			[]byte("羅密歐與朱麗葉"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("罗密欧"),
+					Term:     []byte("羅密歐"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("与"),
+					Term:     []byte("與"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("朱丽叶"),
+					Term:     []byte("朱麗葉"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我购买了道具和服装"),
+			[]byte("我購買了道具和服裝"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -6246,7 +6246,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("购买"),
+					Term:     []byte("購買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -6274,14 +6274,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("PS: 我觉得开源有一个好处，就是能够敦促自己不断改进，避免敞帚自珍"),
+			[]byte("PS: 我覺得開源有一個好處，就是能夠敦促自己不斷改進，避免敞帚自珍"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -6314,14 +6314,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    7,
 					End:      13,
-					Term:     []byte("觉得"),
+					Term:     []byte("覺得"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("开源"),
+					Term:     []byte("開源"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -6335,14 +6335,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    28,
 					End:      34,
-					Term:     []byte("好处"),
+					Term:     []byte("好處"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -6363,7 +6363,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    43,
 					End:      49,
-					Term:     []byte("能够"),
+					Term:     []byte("能夠"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -6384,21 +6384,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      67,
-					Term:     []byte("不断"),
+					Term:     []byte("不斷"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    67,
 					End:      73,
-					Term:     []byte("改进"),
+					Term:     []byte("改進"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    61,
 					End:      73,
-					Term:     []byte("不断改进"),
+					Term:     []byte("不斷改進"),
 					Position: 17,
 					Type:     analysis.Ideographic,
 				},
@@ -6499,19 +6499,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("总经理完成了这件事情"),
+			[]byte("總經理完成了這件事情"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("经理"),
+					Term:     []byte("經理"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("总经理"),
+					Term:     []byte("總經理"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -6532,7 +6532,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -6546,12 +6546,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("电脑修好了"),
+			[]byte("電腦修好了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("电脑"),
+					Term:     []byte("電腦"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -6572,7 +6572,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("做好了这件事情就一了百了了"),
+			[]byte("做好了這件事情就一了百了了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -6591,7 +6591,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -6626,19 +6626,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("人们审美的观点是不同的"),
+			[]byte("人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -6652,7 +6652,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -6680,19 +6680,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我们买了一个美的空调"),
+			[]byte("我們買了一個美的空調"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -6706,7 +6706,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -6720,19 +6720,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("空调"),
+					Term:     []byte("空調"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("线程初始化时我们要注意"),
+			[]byte("線程初始化時我們要注意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("线程"),
+					Term:     []byte("線程"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -6753,14 +6753,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -6781,12 +6781,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一个分子是由好多原子组织成的"),
+			[]byte("一個分子是由好多原子組織成的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -6828,7 +6828,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("组织"),
+					Term:     []byte("組織"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -6849,7 +6849,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("祝你马到功成"),
+			[]byte("祝你馬到功成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -6868,14 +6868,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      18,
-					Term:     []byte("马到功成"),
+					Term:     []byte("馬到功成"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("他掉进了无底洞里"),
+			[]byte("他掉進了無底洞里"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -6894,7 +6894,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("进"),
+					Term:     []byte("進"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -6908,14 +6908,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("无底"),
+					Term:     []byte("無底"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("无底洞"),
+					Term:     []byte("無底洞"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -6929,12 +6929,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国的首都是北京"),
+			[]byte("中國的首都是北京"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -6969,19 +6969,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("孙君意"),
+			[]byte("孫君意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("孙君意"),
+					Term:     []byte("孫君意"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("外交部发言人马朝旭"),
+			[]byte("外交部發言人馬朝旭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7000,47 +7000,47 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("发言"),
+					Term:     []byte("發言"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("发言人"),
+					Term:     []byte("發言人"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("马朝旭"),
+					Term:     []byte("馬朝旭"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("领导人会议和第四届东亚峰会"),
+			[]byte("領導人會議和第四屆東亞峰會"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("领导"),
+					Term:     []byte("領導"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("领导人"),
+					Term:     []byte("領導人"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("会议"),
+					Term:     []byte("會議"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -7061,35 +7061,35 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("四届"),
+					Term:     []byte("四屆"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("第四届"),
+					Term:     []byte("第四屆"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("东亚"),
+					Term:     []byte("東亞"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("峰会"),
+					Term:     []byte("峰會"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("在过去的这五年"),
+			[]byte("在過去的這五年"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7101,7 +7101,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("过去"),
+					Term:     []byte("過去"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -7115,7 +7115,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("这"),
+					Term:     []byte("這"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -7129,12 +7129,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("还需要很长的路要走"),
+			[]byte("還需要很長的路要走"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -7148,7 +7148,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("很长"),
+					Term:     []byte("很長"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -7183,7 +7183,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("60周年首都阅兵"),
+			[]byte("60週年首都閱兵"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7195,7 +7195,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      8,
-					Term:     []byte("周年"),
+					Term:     []byte("週年"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -7209,14 +7209,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    14,
 					End:      20,
-					Term:     []byte("阅兵"),
+					Term:     []byte("閱兵"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("你好人们审美的观点是不同的"),
+			[]byte("你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7228,14 +7228,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -7249,7 +7249,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -7277,12 +7277,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("买水果然后来世博园"),
+			[]byte("買水果然後來世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -7296,14 +7296,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -7317,26 +7317,26 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("博园"),
+					Term:     []byte("博園"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("买水果然后去世博园"),
+			[]byte("買水果然後去世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -7350,7 +7350,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -7371,21 +7371,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("博园"),
+					Term:     []byte("博園"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("但是后来我才知道你是对的"),
+			[]byte("但是後來我才知道你是對的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7397,7 +7397,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -7439,7 +7439,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("对"),
+					Term:     []byte("對"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -7589,7 +7589,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("I love你，不以为耻，反以为rong"),
+			[]byte("I love你，不以為恥，反以為rong"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7636,14 +7636,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("以为"),
+					Term:     []byte("以為"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      24,
-					Term:     []byte("不以为耻"),
+					Term:     []byte("不以為恥"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -7664,7 +7664,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("以为"),
+					Term:     []byte("以為"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -7694,7 +7694,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7713,14 +7713,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -7734,7 +7734,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -7762,7 +7762,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("很好但主要是基于网页形式"),
+			[]byte("很好但主要是基於網頁形式"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7802,14 +7802,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("基于"),
+					Term:     []byte("基於"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("网页"),
+					Term:     []byte("網頁"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -7823,7 +7823,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7842,14 +7842,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -7863,7 +7863,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -7891,19 +7891,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("为什么我不能拥有想要的生活"),
+			[]byte("為什麼我不能擁有想要的生活"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("什么"),
+					Term:     []byte("什麼"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("为什么"),
+					Term:     []byte("為什麼"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -7924,7 +7924,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("拥有"),
+					Term:     []byte("擁有"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -7952,12 +7952,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("后来我才"),
+			[]byte("後來我才"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -7978,7 +7978,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("此次来中国是为了"),
+			[]byte("此次來中國是為了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -7990,14 +7990,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -8011,14 +8011,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("使用了它就可以解决一些问题"),
+			[]byte("使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -8058,7 +8058,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -8072,14 +8072,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte(",使用了它就可以解决一些问题"),
+			[]byte(",使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -8126,7 +8126,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -8140,19 +8140,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    34,
 					End:      40,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("其实使用了它就可以解决一些问题"),
+			[]byte("其實使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("其实"),
+					Term:     []byte("其實"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -8194,7 +8194,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -8208,14 +8208,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("好人使用了它就可以解决一些问题"),
+			[]byte("好人使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -8262,7 +8262,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -8276,26 +8276,26 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("是因为和国家"),
+			[]byte("是因為和國家"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("因为"),
+					Term:     []byte("因為"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("是因为"),
+					Term:     []byte("是因為"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -8309,14 +8309,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("国家"),
+					Term:     []byte("國家"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("老年搜索还支持"),
+			[]byte("老年搜索還支持"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -8335,7 +8335,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -8349,12 +8349,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("干脆就把那部蒙人的闲法给废了拉倒！RT @laoshipukong : 27日，全国人大常委会第三次审议侵权责任法草案，删除了有关医疗损害责任“举证倒置”的规定。在医患纠纷中本已处于弱势地位的消费者由此将陷入万劫不复的境地。 "),
+			[]byte("乾脆就把那部蒙人的閒法給廢了拉倒！RT @laoshipukong : 27日，全國人大常委會第三次審議侵權責任法草案，刪除了有關醫療損害責任「舉證倒置」的規定。在醫患糾紛中本已處於弱勢地位的消費者由此將陷入萬劫不復的境地。 "),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("干脆"),
+					Term:     []byte("乾脆"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -8396,21 +8396,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("闲法"),
+					Term:     []byte("閒法"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    33,
 					End:      36,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    36,
 					End:      39,
-					Term:     []byte("废"),
+					Term:     []byte("廢"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -8508,14 +8508,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      84,
-					Term:     []byte("全国"),
+					Term:     []byte("全國"),
 					Position: 23,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    81,
 					End:      87,
-					Term:     []byte("国人"),
+					Term:     []byte("國人"),
 					Position: 24,
 					Type:     analysis.Ideographic,
 				},
@@ -8536,21 +8536,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    93,
 					End:      99,
-					Term:     []byte("委会"),
+					Term:     []byte("委會"),
 					Position: 27,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    90,
 					End:      99,
-					Term:     []byte("常委会"),
+					Term:     []byte("常委會"),
 					Position: 28,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    78,
 					End:      99,
-					Term:     []byte("全国人大常委会"),
+					Term:     []byte("全國人大常委會"),
 					Position: 29,
 					Type:     analysis.Ideographic,
 				},
@@ -8578,28 +8578,28 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    108,
 					End:      114,
-					Term:     []byte("审议"),
+					Term:     []byte("審議"),
 					Position: 33,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    114,
 					End:      120,
-					Term:     []byte("侵权"),
+					Term:     []byte("侵權"),
 					Position: 34,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    120,
 					End:      126,
-					Term:     []byte("责任"),
+					Term:     []byte("責任"),
 					Position: 35,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    120,
 					End:      129,
-					Term:     []byte("责任法"),
+					Term:     []byte("責任法"),
 					Position: 36,
 					Type:     analysis.Ideographic,
 				},
@@ -8620,7 +8620,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    138,
 					End:      144,
-					Term:     []byte("删除"),
+					Term:     []byte("刪除"),
 					Position: 39,
 					Type:     analysis.Ideographic,
 				},
@@ -8634,42 +8634,42 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    147,
 					End:      153,
-					Term:     []byte("有关"),
+					Term:     []byte("有關"),
 					Position: 41,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    153,
 					End:      159,
-					Term:     []byte("医疗"),
+					Term:     []byte("醫療"),
 					Position: 42,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    159,
 					End:      165,
-					Term:     []byte("损害"),
+					Term:     []byte("損害"),
 					Position: 43,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    165,
 					End:      171,
-					Term:     []byte("责任"),
+					Term:     []byte("責任"),
 					Position: 44,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    171,
 					End:      174,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 45,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    174,
 					End:      180,
-					Term:     []byte("举证"),
+					Term:     []byte("舉證"),
 					Position: 46,
 					Type:     analysis.Ideographic,
 				},
@@ -8683,7 +8683,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    186,
 					End:      189,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 48,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -8697,7 +8697,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    192,
 					End:      198,
-					Term:     []byte("规定"),
+					Term:     []byte("規定"),
 					Position: 50,
 					Type:     analysis.Ideographic,
 				},
@@ -8718,14 +8718,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    204,
 					End:      210,
-					Term:     []byte("医患"),
+					Term:     []byte("醫患"),
 					Position: 53,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    210,
 					End:      216,
-					Term:     []byte("纠纷"),
+					Term:     []byte("糾紛"),
 					Position: 54,
 					Type:     analysis.Ideographic,
 				},
@@ -8746,14 +8746,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    225,
 					End:      231,
-					Term:     []byte("处于"),
+					Term:     []byte("處於"),
 					Position: 57,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    231,
 					End:      237,
-					Term:     []byte("弱势"),
+					Term:     []byte("弱勢"),
 					Position: 58,
 					Type:     analysis.Ideographic,
 				},
@@ -8774,14 +8774,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    246,
 					End:      252,
-					Term:     []byte("消费"),
+					Term:     []byte("消費"),
 					Position: 61,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    246,
 					End:      255,
-					Term:     []byte("消费者"),
+					Term:     []byte("消費者"),
 					Position: 62,
 					Type:     analysis.Ideographic,
 				},
@@ -8795,7 +8795,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    261,
 					End:      264,
-					Term:     []byte("将"),
+					Term:     []byte("將"),
 					Position: 64,
 					Type:     analysis.Ideographic,
 				},
@@ -8809,14 +8809,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    276,
 					End:      282,
-					Term:     []byte("不复"),
+					Term:     []byte("不復"),
 					Position: 66,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    270,
 					End:      282,
-					Term:     []byte("万劫不复"),
+					Term:     []byte("萬劫不復"),
 					Position: 67,
 					Type:     analysis.Ideographic,
 				},
@@ -8867,7 +8867,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("他说的确实在理"),
+			[]byte("他說的確實在理"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -8879,7 +8879,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -8893,7 +8893,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("确实"),
+					Term:     []byte("確實"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -8907,45 +8907,45 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春节讲话"),
+			[]byte("長春市長春節講話"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("市长"),
+					Term:     []byte("市長"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("春节"),
+					Term:     []byte("春節"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("讲话"),
+					Term:     []byte("講話"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("结婚的和尚未结婚的"),
+			[]byte("結婚的和尚未結婚的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -8973,7 +8973,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -8987,12 +8987,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("结合成分子时"),
+			[]byte("結合成分子時"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结合"),
+					Term:     []byte("結合"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -9013,19 +9013,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("旅游和服务是最好的"),
+			[]byte("旅遊和服務是最好的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("旅游"),
+					Term:     []byte("旅遊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -9039,7 +9039,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("服务"),
+					Term:     []byte("服務"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -9067,12 +9067,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("这件事情的确是我的错"),
+			[]byte("這件事情的確是我的錯"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -9086,7 +9086,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("的确"),
+					Term:     []byte("的確"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -9114,14 +9114,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      30,
-					Term:     []byte("错"),
+					Term:     []byte("錯"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("供大家参考指正"),
+			[]byte("供大家參考指正"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9140,7 +9140,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("参考"),
+					Term:     []byte("參考"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -9154,19 +9154,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("哈尔滨政府公布塌桥原因"),
+			[]byte("哈爾濱政府公佈塌橋原因"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("哈尔"),
+					Term:     []byte("哈爾"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("哈尔滨"),
+					Term:     []byte("哈爾濱"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -9180,14 +9180,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("公布"),
+					Term:     []byte("公佈"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("塌桥"),
+					Term:     []byte("塌橋"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -9201,7 +9201,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我在机场入口处"),
+			[]byte("我在機場入口處"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9220,7 +9220,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("机场"),
+					Term:     []byte("機場"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -9234,14 +9234,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("入口处"),
+					Term:     []byte("入口處"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邢永臣摄影报道"),
+			[]byte("邢永臣攝影報道"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9253,21 +9253,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("摄影"),
+					Term:     []byte("攝影"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("报道"),
+					Term:     []byte("報道"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("BP神经网络如何训练才能在分类时增加区分度？"),
+			[]byte("BP神經網絡如何訓練才能在分類時增加區分度？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9279,28 +9279,28 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      8,
-					Term:     []byte("神经"),
+					Term:     []byte("神經"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    8,
 					End:      14,
-					Term:     []byte("网络"),
+					Term:     []byte("網絡"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    2,
 					End:      11,
-					Term:     []byte("神经网"),
+					Term:     []byte("神經網"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    2,
 					End:      14,
-					Term:     []byte("神经网络"),
+					Term:     []byte("神經網絡"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -9314,7 +9314,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    20,
 					End:      26,
-					Term:     []byte("训练"),
+					Term:     []byte("訓練"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -9335,14 +9335,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    35,
 					End:      41,
-					Term:     []byte("分类"),
+					Term:     []byte("分類"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    41,
 					End:      44,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -9356,7 +9356,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    50,
 					End:      56,
-					Term:     []byte("区分"),
+					Term:     []byte("區分"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -9370,7 +9370,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    50,
 					End:      59,
-					Term:     []byte("区分度"),
+					Term:     []byte("區分度"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -9384,7 +9384,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("南京市长江大桥"),
+			[]byte("南京市長江大橋"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9410,33 +9410,33 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("长江"),
+					Term:     []byte("長江"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("大桥"),
+					Term:     []byte("大橋"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      21,
-					Term:     []byte("长江大桥"),
+					Term:     []byte("長江大橋"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("应一些使用者的建议，也为了便于利用NiuTrans用于SMT研究"),
+			[]byte("應一些使用者的建議，也為了便於利用NiuTrans用於SMT研究"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("应"),
+					Term:     []byte("應"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -9478,7 +9478,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("建议"),
+					Term:     []byte("建議"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -9499,14 +9499,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("便于"),
+					Term:     []byte("便於"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -9527,7 +9527,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    59,
 					End:      65,
-					Term:     []byte("用于"),
+					Term:     []byte("用於"),
 					Position: 14,
 					Type:     analysis.Ideographic,
 				},
@@ -9548,45 +9548,45 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春药店"),
+			[]byte("長春市長春藥店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("长春市"),
+					Term:     []byte("長春市"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("药店"),
+					Term:     []byte("藥店"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邓颖超生前最喜欢的衣服"),
+			[]byte("鄧穎超生前最喜歡的衣服"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("邓颖超"),
+					Term:     []byte("鄧穎超"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -9607,7 +9607,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -9628,19 +9628,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("胡锦涛是热爱世界和平的政治局常委"),
+			[]byte("胡錦濤是熱愛世界和平的政治局常委"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("锦涛"),
+					Term:     []byte("錦濤"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("胡锦涛"),
+					Term:     []byte("胡錦濤"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -9654,7 +9654,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("热爱"),
+					Term:     []byte("熱愛"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -9703,7 +9703,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("程序员祝海林和朱会震是在孙健的左面和右面, 范凯在最右面.再往左是李松洪"),
+			[]byte("程序員祝海林和朱會震是在孫健的左面和右面, 範凱在最右面.再往左是李松洪"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9715,7 +9715,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("程序员"),
+					Term:     []byte("程序員"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -9743,7 +9743,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      30,
-					Term:     []byte("朱会震"),
+					Term:     []byte("朱會震"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -9764,7 +9764,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      42,
-					Term:     []byte("孙健"),
+					Term:     []byte("孫健"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -9813,7 +9813,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    62,
 					End:      68,
-					Term:     []byte("范凯"),
+					Term:     []byte("範凱"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -9876,7 +9876,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一次性交多少钱"),
+			[]byte("一次性交多少錢"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -9909,19 +9909,19 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("钱"),
+					Term:     []byte("錢"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("两块五一套，三块八一斤，四块七一本，五块六一条"),
+			[]byte("兩塊五一套，三塊八一斤，四塊七一本，五塊六一條"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("两块"),
+					Term:     []byte("兩塊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -9949,7 +9949,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("三块"),
+					Term:     []byte("三塊"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -9977,7 +9977,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      42,
-					Term:     []byte("四块"),
+					Term:     []byte("四塊"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -10005,7 +10005,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    54,
 					End:      60,
-					Term:     []byte("五块"),
+					Term:     []byte("五塊"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -10019,14 +10019,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("一条"),
+					Term:     []byte("一條"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("小和尚留了一个像大和尚一样的和尚头"),
+			[]byte("小和尚留了一個像大和尚一樣的和尚頭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10059,7 +10059,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -10087,7 +10087,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("一样"),
+					Term:     []byte("一樣"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -10108,14 +10108,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      51,
-					Term:     []byte("和尚头"),
+					Term:     []byte("和尚頭"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我是中华人民共和国公民;我爸爸是共和党党员; 地铁和平门站"),
+			[]byte("我是中華人民共和國公民;我爸爸是共和黨黨員; 地鐵和平門站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10134,14 +10134,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("中华"),
+					Term:     []byte("中華"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("华人"),
+					Term:     []byte("華人"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -10162,14 +10162,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("共和国"),
+					Term:     []byte("共和國"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      27,
-					Term:     []byte("中华人民共和国"),
+					Term:     []byte("中華人民共和國"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -10218,14 +10218,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      55,
-					Term:     []byte("共和党"),
+					Term:     []byte("共和黨"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    55,
 					End:      61,
-					Term:     []byte("党员"),
+					Term:     []byte("黨員"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -10246,7 +10246,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("地铁"),
+					Term:     []byte("地鐵"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
@@ -10260,7 +10260,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    69,
 					End:      78,
-					Term:     []byte("和平门"),
+					Term:     []byte("和平門"),
 					Position: 21,
 					Type:     analysis.Ideographic,
 				},
@@ -10274,12 +10274,12 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("张晓梅去人民医院做了个B超然后去买了件T恤"),
+			[]byte("張曉梅去人民醫院做了個B超然後去買了件T恤"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("张晓梅"),
+					Term:     []byte("張曉梅"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -10300,7 +10300,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("医院"),
+					Term:     []byte("醫院"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -10321,7 +10321,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -10335,7 +10335,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      43,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -10349,7 +10349,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      49,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -10377,7 +10377,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("AT&T是一件不错的公司，给你发offer了吗？"),
+			[]byte("AT&T是一件不錯的公司，給你發offer了嗎？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10403,7 +10403,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("不错"),
+					Term:     []byte("不錯"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -10431,7 +10431,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    31,
 					End:      34,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -10445,7 +10445,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      40,
-					Term:     []byte("发"),
+					Term:     []byte("發"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -10466,7 +10466,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      51,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -10480,7 +10480,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("C++和c#是什么关系？11+122=133，是吗？PI=3.14159"),
+			[]byte("C++和c#是什麼關係？11+122=133，是嗎？PI=3.14159"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10513,14 +10513,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("什么"),
+					Term:     []byte("什麼"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("关系"),
+					Term:     []byte("關係"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -10583,7 +10583,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      45,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -10618,7 +10618,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("你认识那个和主席握手的的哥吗？他开一辆黑色的士。"),
+			[]byte("你認識那個和主席握手的的哥嗎？他開一輛黑色的士。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10630,14 +10630,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("认识"),
+					Term:     []byte("認識"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("那个"),
+					Term:     []byte("那個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -10679,7 +10679,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -10693,14 +10693,14 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    45,
 					End:      51,
-					Term:     []byte("他开"),
+					Term:     []byte("他開"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    51,
 					End:      57,
-					Term:     []byte("一辆"),
+					Term:     []byte("一輛"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -10728,26 +10728,26 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("枪杆子中出政权"),
+			[]byte("槍桿子中出政權"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("枪杆"),
+					Term:     []byte("槍桿"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("杆子"),
+					Term:     []byte("桿子"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("枪杆子"),
+					Term:     []byte("槍桿子"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -10768,26 +10768,26 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("政权"),
+					Term:     []byte("政權"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("张三风同学走上了不归路"),
+			[]byte("張三風同學走上了不歸路"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("张三风"),
+					Term:     []byte("張三風"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("同学"),
+					Term:     []byte("同學"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -10808,21 +10808,21 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("归路"),
+					Term:     []byte("歸路"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    24,
 					End:      33,
-					Term:     []byte("不归路"),
+					Term:     []byte("不歸路"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("阿Q腰间挂着BB机手里拿着大哥大，说：我一般吃饭不AA制的。"),
+			[]byte("阿Q腰間掛著BB機手裡拿著大哥大，說：我一般吃飯不AA制的。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10834,35 +10834,35 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    4,
 					End:      10,
-					Term:     []byte("腰间"),
+					Term:     []byte("腰間"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    10,
 					End:      13,
-					Term:     []byte("挂"),
+					Term:     []byte("掛"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    16,
 					End:      21,
-					Term:     []byte("BB机"),
+					Term:     []byte("BB機"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("手里"),
+					Term:     []byte("手裡"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -10876,7 +10876,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -10904,7 +10904,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    45,
 					End:      48,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -10932,7 +10932,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    60,
 					End:      66,
-					Term:     []byte("吃饭"),
+					Term:     []byte("吃飯"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -10967,7 +10967,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("在1号店能买到小S和大S八卦的书。"),
+			[]byte("在1號店能買到小S和大S八卦的書。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -10979,7 +10979,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      10,
-					Term:     []byte("1号店"),
+					Term:     []byte("1號店"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -10993,7 +10993,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -11042,7 +11042,7 @@ func TestJiebaTokenizerSearchModeWithHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("书"),
+					Term:     []byte("書"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -11072,12 +11072,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 		output analysis.TokenStream
 	}{
 		{
-			[]byte("这是一个伸手不见五指的黑夜。我叫孙悟空，我爱北京，我爱Python和C++。"),
+			[]byte("這是一個伸手不見五指的黑夜。我叫孫悟空，我愛北京，我愛Python和C++。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("这"),
+					Term:     []byte("這"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -11091,14 +11091,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      30,
-					Term:     []byte("伸手不见五指"),
+					Term:     []byte("伸手不見五指"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -11140,7 +11140,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      57,
-					Term:     []byte("孙悟空"),
+					Term:     []byte("孫悟空"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -11161,7 +11161,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      66,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -11189,7 +11189,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      81,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 17,
 					Type:     analysis.Ideographic,
 				},
@@ -11224,7 +11224,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我不喜欢日本和服。"),
+			[]byte("我不喜歡日本和服。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11243,7 +11243,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -11271,7 +11271,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("雷猴回归人间。"),
+			[]byte("雷猴回歸人間。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11283,14 +11283,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("回归"),
+					Term:     []byte("回歸"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("人间"),
+					Term:     []byte("人間"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -11304,19 +11304,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作"),
+			[]byte("工信處女幹事每月經過下屬科室都要親口交代24口交換機等技術性器件的安裝工作"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("工信处"),
+					Term:     []byte("工信處"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("女干事"),
+					Term:     []byte("女幹事"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -11330,14 +11330,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("经过"),
+					Term:     []byte("經過"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("下属"),
+					Term:     []byte("下屬"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -11365,7 +11365,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      54,
-					Term:     []byte("亲口"),
+					Term:     []byte("親口"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -11393,7 +11393,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    65,
 					End:      74,
-					Term:     []byte("交换机"),
+					Term:     []byte("交換機"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -11407,7 +11407,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    77,
 					End:      86,
-					Term:     []byte("技术性"),
+					Term:     []byte("技術性"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -11428,7 +11428,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    95,
 					End:      101,
-					Term:     []byte("安装"),
+					Term:     []byte("安裝"),
 					Position: 18,
 					Type:     analysis.Ideographic,
 				},
@@ -11468,7 +11468,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("永和服装饰品有限公司"),
+			[]byte("永和服裝飾品有限公司"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11480,14 +11480,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("饰品"),
+					Term:     []byte("飾品"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -11501,7 +11501,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我爱北京天安门"),
+			[]byte("我愛北京天安門"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11513,7 +11513,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -11527,7 +11527,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("天安门"),
+					Term:     []byte("天安門"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -11546,26 +11546,26 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("隐马尔可夫"),
+			[]byte("隱馬爾可夫"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("隐"),
+					Term:     []byte("隱"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    3,
 					End:      15,
-					Term:     []byte("马尔可夫"),
+					Term:     []byte("馬爾可夫"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("雷猴是个好网站"),
+			[]byte("雷猴是個好網站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11584,7 +11584,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -11598,19 +11598,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("网站"),
+					Term:     []byte("網站"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("“Microsoft”一词由“MICROcomputer（微型计算机）”和“SOFTware（软件）”两部分组成"),
+			[]byte("「Microsoft」一詞由「MICROcomputer（微型計算機）」和「SOFTware（軟件）」兩部分組成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 1,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -11624,7 +11624,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 3,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -11638,7 +11638,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("词"),
+					Term:     []byte("詞"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -11652,7 +11652,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 7,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -11680,7 +11680,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    49,
 					End:      58,
-					Term:     []byte("计算机"),
+					Term:     []byte("計算機"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -11694,7 +11694,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      64,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 13,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -11708,7 +11708,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    67,
 					End:      70,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 15,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -11729,7 +11729,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    81,
 					End:      87,
-					Term:     []byte("软件"),
+					Term:     []byte("軟件"),
 					Position: 18,
 					Type:     analysis.Ideographic,
 				},
@@ -11743,14 +11743,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    90,
 					End:      93,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 20,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    93,
 					End:      96,
-					Term:     []byte("两"),
+					Term:     []byte("兩"),
 					Position: 21,
 					Type:     analysis.Ideographic,
 				},
@@ -11764,19 +11764,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    102,
 					End:      108,
-					Term:     []byte("组成"),
+					Term:     []byte("組成"),
 					Position: 23,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("草泥马和欺实马是今年的流行词汇"),
+			[]byte("草泥馬和欺實馬是今年的流行詞彙"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("草泥马"),
+					Term:     []byte("草泥馬"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -11797,14 +11797,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("实"),
+					Term:     []byte("實"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("马"),
+					Term:     []byte("馬"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -11839,14 +11839,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("词汇"),
+					Term:     []byte("詞彙"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("伊藤洋华堂总府店"),
+			[]byte("伊藤洋華堂總府店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11865,14 +11865,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      15,
-					Term:     []byte("洋华堂"),
+					Term:     []byte("洋華堂"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("总府"),
+					Term:     []byte("總府"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -11886,45 +11886,45 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国科学院计算技术研究所"),
+			[]byte("中國科學院計算技術研究所"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      36,
-					Term:     []byte("中国科学院计算技术研究所"),
+					Term:     []byte("中國科學院計算技術研究所"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("罗密欧与朱丽叶"),
+			[]byte("羅密歐與朱麗葉"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("罗密欧"),
+					Term:     []byte("羅密歐"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("与"),
+					Term:     []byte("與"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("朱丽叶"),
+					Term:     []byte("朱麗葉"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我购买了道具和服装"),
+			[]byte("我購買了道具和服裝"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -11936,7 +11936,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("购买"),
+					Term:     []byte("購買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -11964,14 +11964,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("PS: 我觉得开源有一个好处，就是能够敦促自己不断改进，避免敞帚自珍"),
+			[]byte("PS: 我覺得開源有一個好處，就是能夠敦促自己不斷改進，避免敞帚自珍"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12004,14 +12004,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    7,
 					End:      13,
-					Term:     []byte("觉得"),
+					Term:     []byte("覺得"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("开源"),
+					Term:     []byte("開源"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -12025,14 +12025,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    28,
 					End:      34,
-					Term:     []byte("好处"),
+					Term:     []byte("好處"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -12053,7 +12053,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    43,
 					End:      49,
-					Term:     []byte("能够"),
+					Term:     []byte("能夠"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -12074,7 +12074,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      73,
-					Term:     []byte("不断改进"),
+					Term:     []byte("不斷改進"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -12154,12 +12154,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("总经理完成了这件事情"),
+			[]byte("總經理完成了這件事情"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("总经理"),
+					Term:     []byte("總經理"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12180,7 +12180,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -12194,12 +12194,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("电脑修好了"),
+			[]byte("電腦修好了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("电脑"),
+					Term:     []byte("電腦"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12220,7 +12220,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("做好了这件事情就一了百了了"),
+			[]byte("做好了這件事情就一了百了了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12239,7 +12239,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -12274,19 +12274,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("人们审美的观点是不同的"),
+			[]byte("人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -12300,7 +12300,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -12328,19 +12328,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我们买了一个美的空调"),
+			[]byte("我們買了一個美的空調"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -12354,7 +12354,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -12368,19 +12368,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("空调"),
+					Term:     []byte("空調"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("线程初始化时我们要注意"),
+			[]byte("線程初始化時我們要注意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("线程"),
+					Term:     []byte("線程"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12394,14 +12394,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -12422,12 +12422,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一个分子是由好多原子组织成的"),
+			[]byte("一個分子是由好多原子組織成的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12469,7 +12469,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("组织"),
+					Term:     []byte("組織"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -12490,7 +12490,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("祝你马到功成"),
+			[]byte("祝你馬到功成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12509,14 +12509,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      18,
-					Term:     []byte("马到功成"),
+					Term:     []byte("馬到功成"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("他掉进了无底洞里"),
+			[]byte("他掉進了無底洞里"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12535,7 +12535,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("进"),
+					Term:     []byte("進"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -12549,7 +12549,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("无底洞"),
+					Term:     []byte("無底洞"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -12563,12 +12563,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国的首都是北京"),
+			[]byte("中國的首都是北京"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12603,12 +12603,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("孙君意"),
+			[]byte("孫君意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("孙"),
+					Term:     []byte("孫"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12629,7 +12629,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("外交部发言人马朝旭"),
+			[]byte("外交部發言人馬朝旭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12641,33 +12641,33 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("发言人"),
+					Term:     []byte("發言人"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("马朝旭"),
+					Term:     []byte("馬朝旭"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("领导人会议和第四届东亚峰会"),
+			[]byte("領導人會議和第四屆東亞峰會"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("领导人"),
+					Term:     []byte("領導人"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("会议"),
+					Term:     []byte("會議"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -12681,28 +12681,28 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("第四届"),
+					Term:     []byte("第四屆"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("东亚"),
+					Term:     []byte("東亞"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("峰会"),
+					Term:     []byte("峰會"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("在过去的这五年"),
+			[]byte("在過去的這五年"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12714,7 +12714,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("过去"),
+					Term:     []byte("過去"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -12728,7 +12728,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("这"),
+					Term:     []byte("這"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -12742,12 +12742,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("还需要很长的路要走"),
+			[]byte("還需要很長的路要走"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12768,7 +12768,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("长"),
+					Term:     []byte("長"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -12803,7 +12803,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("60周年首都阅兵"),
+			[]byte("60週年首都閱兵"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12815,7 +12815,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      8,
-					Term:     []byte("周年"),
+					Term:     []byte("週年"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -12829,14 +12829,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    14,
 					End:      20,
-					Term:     []byte("阅兵"),
+					Term:     []byte("閱兵"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("你好人们审美的观点是不同的"),
+			[]byte("你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12848,14 +12848,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -12869,7 +12869,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -12897,12 +12897,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("买水果然后来世博园"),
+			[]byte("買水果然後來世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12916,33 +12916,33 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("买水果然后去世博园"),
+			[]byte("買水果然後去世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -12956,7 +12956,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -12970,14 +12970,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("但是后来我才知道你是对的"),
+			[]byte("但是後來我才知道你是對的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -12989,7 +12989,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -13031,7 +13031,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("对"),
+					Term:     []byte("對"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -13181,7 +13181,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("I love你，不以为耻，反以为rong"),
+			[]byte("I love你，不以為恥，反以為rong"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13221,7 +13221,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      24,
-					Term:     []byte("不以为耻"),
+					Term:     []byte("不以為恥"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -13242,7 +13242,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("以为"),
+					Term:     []byte("以為"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -13272,7 +13272,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13291,14 +13291,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -13312,7 +13312,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -13340,7 +13340,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("很好但主要是基于网页形式"),
+			[]byte("很好但主要是基於網頁形式"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13380,14 +13380,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("基于"),
+					Term:     []byte("基於"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("网页"),
+					Term:     []byte("網頁"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -13401,7 +13401,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13420,14 +13420,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -13441,7 +13441,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -13469,12 +13469,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("为什么我不能拥有想要的生活"),
+			[]byte("為什麼我不能擁有想要的生活"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("为什么"),
+					Term:     []byte("為什麼"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -13495,7 +13495,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("拥有"),
+					Term:     []byte("擁有"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -13523,12 +13523,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("后来我才"),
+			[]byte("後來我才"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -13549,7 +13549,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("此次来中国是为了"),
+			[]byte("此次來中國是為了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13561,14 +13561,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -13582,14 +13582,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("使用了它就可以解决一些问题"),
+			[]byte("使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13629,7 +13629,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -13643,14 +13643,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte(",使用了它就可以解决一些问题"),
+			[]byte(",使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13697,7 +13697,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -13711,19 +13711,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    34,
 					End:      40,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("其实使用了它就可以解决一些问题"),
+			[]byte("其實使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("其实"),
+					Term:     []byte("其實"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -13765,7 +13765,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -13779,14 +13779,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("好人使用了它就可以解决一些问题"),
+			[]byte("好人使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13833,7 +13833,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -13847,19 +13847,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("是因为和国家"),
+			[]byte("是因為和國家"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("是因为"),
+					Term:     []byte("是因為"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -13873,14 +13873,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("国家"),
+					Term:     []byte("國家"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("老年搜索还支持"),
+			[]byte("老年搜索還支持"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -13899,7 +13899,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -13913,12 +13913,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("干脆就把那部蒙人的闲法给废了拉倒！RT @laoshipukong : 27日，全国人大常委会第三次审议侵权责任法草案，删除了有关医疗损害责任“举证倒置”的规定。在医患纠纷中本已处于弱势地位的消费者由此将陷入万劫不复的境地。 "),
+			[]byte("乾脆就把那部蒙人的閒法給廢了拉倒！RT @laoshipukong : 27日，全國人大常委會第三次審議侵權責任法草案，刪除了有關醫療損害責任「舉證倒置」的規定。在醫患糾紛中本已處於弱勢地位的消費者由此將陷入萬劫不復的境地。 "),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("干脆"),
+					Term:     []byte("乾脆"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -13974,7 +13974,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      30,
-					Term:     []byte("闲"),
+					Term:     []byte("閒"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -13988,14 +13988,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      36,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    36,
 					End:      39,
-					Term:     []byte("废"),
+					Term:     []byte("廢"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -14093,7 +14093,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      99,
-					Term:     []byte("全国人大常委会"),
+					Term:     []byte("全國人大常委會"),
 					Position: 26,
 					Type:     analysis.Ideographic,
 				},
@@ -14107,21 +14107,21 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    108,
 					End:      114,
-					Term:     []byte("审议"),
+					Term:     []byte("審議"),
 					Position: 28,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    114,
 					End:      120,
-					Term:     []byte("侵权"),
+					Term:     []byte("侵權"),
 					Position: 29,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    120,
 					End:      129,
-					Term:     []byte("责任法"),
+					Term:     []byte("責任法"),
 					Position: 30,
 					Type:     analysis.Ideographic,
 				},
@@ -14142,7 +14142,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    138,
 					End:      144,
-					Term:     []byte("删除"),
+					Term:     []byte("刪除"),
 					Position: 33,
 					Type:     analysis.Ideographic,
 				},
@@ -14156,42 +14156,42 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    147,
 					End:      153,
-					Term:     []byte("有关"),
+					Term:     []byte("有關"),
 					Position: 35,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    153,
 					End:      159,
-					Term:     []byte("医疗"),
+					Term:     []byte("醫療"),
 					Position: 36,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    159,
 					End:      165,
-					Term:     []byte("损害"),
+					Term:     []byte("損害"),
 					Position: 37,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    165,
 					End:      171,
-					Term:     []byte("责任"),
+					Term:     []byte("責任"),
 					Position: 38,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    171,
 					End:      174,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 39,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    174,
 					End:      180,
-					Term:     []byte("举证"),
+					Term:     []byte("舉證"),
 					Position: 40,
 					Type:     analysis.Ideographic,
 				},
@@ -14205,7 +14205,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    186,
 					End:      189,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 42,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -14219,7 +14219,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    192,
 					End:      198,
-					Term:     []byte("规定"),
+					Term:     []byte("規定"),
 					Position: 44,
 					Type:     analysis.Ideographic,
 				},
@@ -14240,14 +14240,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    204,
 					End:      210,
-					Term:     []byte("医患"),
+					Term:     []byte("醫患"),
 					Position: 47,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    210,
 					End:      216,
-					Term:     []byte("纠纷"),
+					Term:     []byte("糾紛"),
 					Position: 48,
 					Type:     analysis.Ideographic,
 				},
@@ -14275,14 +14275,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    225,
 					End:      231,
-					Term:     []byte("处于"),
+					Term:     []byte("處於"),
 					Position: 52,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    231,
 					End:      237,
-					Term:     []byte("弱势"),
+					Term:     []byte("弱勢"),
 					Position: 53,
 					Type:     analysis.Ideographic,
 				},
@@ -14303,7 +14303,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    246,
 					End:      255,
-					Term:     []byte("消费者"),
+					Term:     []byte("消費者"),
 					Position: 56,
 					Type:     analysis.Ideographic,
 				},
@@ -14317,7 +14317,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    261,
 					End:      264,
-					Term:     []byte("将"),
+					Term:     []byte("將"),
 					Position: 58,
 					Type:     analysis.Ideographic,
 				},
@@ -14331,7 +14331,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    270,
 					End:      282,
-					Term:     []byte("万劫不复"),
+					Term:     []byte("萬劫不復"),
 					Position: 60,
 					Type:     analysis.Ideographic,
 				},
@@ -14382,7 +14382,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("他说的确实在理"),
+			[]byte("他說的確實在理"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -14394,7 +14394,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -14408,7 +14408,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("确实"),
+					Term:     []byte("確實"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -14429,45 +14429,45 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春节讲话"),
+			[]byte("長春市長春節講話"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("市长"),
+					Term:     []byte("市長"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("春节"),
+					Term:     []byte("春節"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("讲话"),
+					Term:     []byte("講話"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("结婚的和尚未结婚的"),
+			[]byte("結婚的和尚未結婚的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -14495,7 +14495,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -14509,12 +14509,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("结合成分子时"),
+			[]byte("結合成分子時"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结合"),
+					Term:     []byte("結合"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -14535,19 +14535,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("旅游和服务是最好的"),
+			[]byte("旅遊和服務是最好的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("旅游"),
+					Term:     []byte("旅遊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -14561,7 +14561,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("服务"),
+					Term:     []byte("服務"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -14589,12 +14589,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("这件事情的确是我的错"),
+			[]byte("這件事情的確是我的錯"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -14608,7 +14608,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("的确"),
+					Term:     []byte("的確"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -14636,14 +14636,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      30,
-					Term:     []byte("错"),
+					Term:     []byte("錯"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("供大家参考指正"),
+			[]byte("供大家參考指正"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -14662,7 +14662,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("参考"),
+					Term:     []byte("參考"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -14676,12 +14676,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("哈尔滨政府公布塌桥原因"),
+			[]byte("哈爾濱政府公佈塌橋原因"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("哈尔滨"),
+					Term:     []byte("哈爾濱"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -14695,7 +14695,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("公布"),
+					Term:     []byte("公佈"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -14709,7 +14709,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("桥"),
+					Term:     []byte("橋"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -14723,7 +14723,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我在机场入口处"),
+			[]byte("我在機場入口處"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -14742,21 +14742,21 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("机场"),
+					Term:     []byte("機場"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("入口处"),
+					Term:     []byte("入口處"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邢永臣摄影报道"),
+			[]byte("邢永臣攝影報道"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -14782,21 +14782,21 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("摄影"),
+					Term:     []byte("攝影"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("报道"),
+					Term:     []byte("報道"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("BP神经网络如何训练才能在分类时增加区分度？"),
+			[]byte("BP神經網絡如何訓練才能在分類時增加區分度？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -14808,7 +14808,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      14,
-					Term:     []byte("神经网络"),
+					Term:     []byte("神經網絡"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -14822,7 +14822,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    20,
 					End:      26,
-					Term:     []byte("训练"),
+					Term:     []byte("訓練"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -14843,14 +14843,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    35,
 					End:      41,
-					Term:     []byte("分类"),
+					Term:     []byte("分類"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    41,
 					End:      44,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -14864,7 +14864,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    50,
 					End:      59,
-					Term:     []byte("区分度"),
+					Term:     []byte("區分度"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -14878,7 +14878,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("南京市长江大桥"),
+			[]byte("南京市長江大橋"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -14890,19 +14890,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      21,
-					Term:     []byte("长江大桥"),
+					Term:     []byte("長江大橋"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("应一些使用者的建议，也为了便于利用NiuTrans用于SMT研究"),
+			[]byte("應一些使用者的建議，也為了便於利用NiuTrans用於SMT研究"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("应"),
+					Term:     []byte("應"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -14930,7 +14930,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("建议"),
+					Term:     []byte("建議"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -14951,14 +14951,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("便于"),
+					Term:     []byte("便於"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -14979,7 +14979,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    59,
 					End:      65,
-					Term:     []byte("用于"),
+					Term:     []byte("用於"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -15000,38 +15000,38 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春药店"),
+			[]byte("長春市長春藥店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("长春市"),
+					Term:     []byte("長春市"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("药店"),
+					Term:     []byte("藥店"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邓颖超生前最喜欢的衣服"),
+			[]byte("鄧穎超生前最喜歡的衣服"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("邓颖超"),
+					Term:     []byte("鄧穎超"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -15052,7 +15052,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -15073,12 +15073,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("胡锦涛是热爱世界和平的政治局常委"),
+			[]byte("胡錦濤是熱愛世界和平的政治局常委"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("胡锦涛"),
+					Term:     []byte("胡錦濤"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -15092,7 +15092,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("热爱"),
+					Term:     []byte("熱愛"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -15134,12 +15134,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("程序员祝海林和朱会震是在孙健的左面和右面, 范凯在最右面.再往左是李松洪"),
+			[]byte("程序員祝海林和朱會震是在孫健的左面和右面, 範凱在最右面.再往左是李松洪"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("程序员"),
+					Term:     []byte("程序員"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -15174,7 +15174,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("会"),
+					Term:     []byte("會"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -15202,7 +15202,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      39,
-					Term:     []byte("孙"),
+					Term:     []byte("孫"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -15258,14 +15258,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    62,
 					End:      65,
-					Term:     []byte("范"),
+					Term:     []byte("範"),
 					Position: 18,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    65,
 					End:      68,
-					Term:     []byte("凯"),
+					Term:     []byte("凱"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
@@ -15349,7 +15349,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一次性交多少钱"),
+			[]byte("一次性交多少錢"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -15375,19 +15375,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("钱"),
+					Term:     []byte("錢"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("两块五一套，三块八一斤，四块七一本，五块六一条"),
+			[]byte("兩塊五一套，三塊八一斤，四塊七一本，五塊六一條"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("两块"),
+					Term:     []byte("兩塊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -15415,7 +15415,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("三块"),
+					Term:     []byte("三塊"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -15443,7 +15443,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      42,
-					Term:     []byte("四块"),
+					Term:     []byte("四塊"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -15471,7 +15471,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    54,
 					End:      60,
-					Term:     []byte("五块"),
+					Term:     []byte("五塊"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -15485,14 +15485,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("一条"),
+					Term:     []byte("一條"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("小和尚留了一个像大和尚一样的和尚头"),
+			[]byte("小和尚留了一個像大和尚一樣的和尚頭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -15525,7 +15525,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -15553,7 +15553,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("一样"),
+					Term:     []byte("一樣"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -15567,14 +15567,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      51,
-					Term:     []byte("和尚头"),
+					Term:     []byte("和尚頭"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我是中华人民共和国公民;我爸爸是共和党党员; 地铁和平门站"),
+			[]byte("我是中華人民共和國公民;我爸爸是共和黨黨員; 地鐵和平門站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -15593,7 +15593,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      27,
-					Term:     []byte("中华人民共和国"),
+					Term:     []byte("中華人民共和國"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -15635,14 +15635,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      55,
-					Term:     []byte("共和党"),
+					Term:     []byte("共和黨"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    55,
 					End:      61,
-					Term:     []byte("党员"),
+					Term:     []byte("黨員"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -15663,14 +15663,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("地铁"),
+					Term:     []byte("地鐵"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    69,
 					End:      78,
-					Term:     []byte("和平门"),
+					Term:     []byte("和平門"),
 					Position: 14,
 					Type:     analysis.Ideographic,
 				},
@@ -15684,12 +15684,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("张晓梅去人民医院做了个B超然后去买了件T恤"),
+			[]byte("張曉梅去人民醫院做了個B超然後去買了件T恤"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("张晓梅"),
+					Term:     []byte("張曉梅"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -15710,7 +15710,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("医院"),
+					Term:     []byte("醫院"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -15731,7 +15731,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -15745,7 +15745,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      43,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -15759,7 +15759,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      49,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -15787,7 +15787,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("AT&T是一件不错的公司，给你发offer了吗？"),
+			[]byte("AT&T是一件不錯的公司，給你發offer了嗎？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -15813,7 +15813,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("不错"),
+					Term:     []byte("不錯"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -15841,7 +15841,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    31,
 					End:      34,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -15855,7 +15855,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      40,
-					Term:     []byte("发"),
+					Term:     []byte("發"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -15876,7 +15876,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      51,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -15890,7 +15890,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("C++和c#是什么关系？11+122=133，是吗？PI=3.14159"),
+			[]byte("C++和c#是什麼關係？11+122=133，是嗎？PI=3.14159"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -15923,14 +15923,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("什么"),
+					Term:     []byte("什麼"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("关系"),
+					Term:     []byte("關係"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -15993,7 +15993,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      45,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -16042,7 +16042,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("你认识那个和主席握手的的哥吗？他开一辆黑色的士。"),
+			[]byte("你認識那個和主席握手的的哥嗎？他開一輛黑色的士。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -16054,14 +16054,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("认识"),
+					Term:     []byte("認識"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("那个"),
+					Term:     []byte("那個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -16103,7 +16103,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -16124,14 +16124,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      51,
-					Term:     []byte("开"),
+					Term:     []byte("開"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    51,
 					End:      57,
-					Term:     []byte("一辆"),
+					Term:     []byte("一輛"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -16159,12 +16159,12 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("枪杆子中出政权"),
+			[]byte("槍桿子中出政權"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("枪杆子"),
+					Term:     []byte("槍桿子"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -16185,19 +16185,19 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("政权"),
+					Term:     []byte("政權"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("张三风同学走上了不归路"),
+			[]byte("張三風同學走上了不歸路"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("张"),
+					Term:     []byte("張"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -16211,14 +16211,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("风"),
+					Term:     []byte("風"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("同学"),
+					Term:     []byte("同學"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -16239,14 +16239,14 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      33,
-					Term:     []byte("不归路"),
+					Term:     []byte("不歸路"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("阿Q腰间挂着BB机手里拿着大哥大，说：我一般吃饭不AA制的。"),
+			[]byte("阿Q腰間掛著BB機手裡拿著大哥大，說：我一般吃飯不AA制的。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -16258,35 +16258,35 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    4,
 					End:      10,
-					Term:     []byte("腰间"),
+					Term:     []byte("腰間"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    10,
 					End:      13,
-					Term:     []byte("挂"),
+					Term:     []byte("掛"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    16,
 					End:      21,
-					Term:     []byte("BB机"),
+					Term:     []byte("BB機"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("手里"),
+					Term:     []byte("手裡"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -16300,7 +16300,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -16321,7 +16321,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    45,
 					End:      48,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -16349,7 +16349,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    60,
 					End:      66,
-					Term:     []byte("吃饭"),
+					Term:     []byte("吃飯"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -16384,7 +16384,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("在1号店能买到小S和大S八卦的书。"),
+			[]byte("在1號店能買到小S和大S八卦的書。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -16396,7 +16396,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      10,
-					Term:     []byte("1号店"),
+					Term:     []byte("1號店"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -16410,7 +16410,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -16459,7 +16459,7 @@ func TestJiebaTokenizerDefaultModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("书"),
+					Term:     []byte("書"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -16488,12 +16488,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 		input  []byte
 		output analysis.TokenStream
 	}{{
-		[]byte("这是一个伸手不见五指的黑夜。我叫孙悟空，我爱北京，我爱Python和C++。"),
+		[]byte("這是一個伸手不見五指的黑夜。我叫孫悟空，我愛北京，我愛Python和C++。"),
 		analysis.TokenStream{
 			{
 				Start:    0,
 				End:      3,
-				Term:     []byte("这"),
+				Term:     []byte("這"),
 				Position: 1,
 				Type:     analysis.Ideographic,
 			},
@@ -16507,7 +16507,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			{
 				Start:    6,
 				End:      12,
-				Term:     []byte("一个"),
+				Term:     []byte("一個"),
 				Position: 3,
 				Type:     analysis.Ideographic,
 			},
@@ -16521,7 +16521,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			{
 				Start:    18,
 				End:      24,
-				Term:     []byte("不见"),
+				Term:     []byte("不見"),
 				Position: 5,
 				Type:     analysis.Ideographic,
 			},
@@ -16535,7 +16535,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			{
 				Start:    12,
 				End:      30,
-				Term:     []byte("伸手不见五指"),
+				Term:     []byte("伸手不見五指"),
 				Position: 7,
 				Type:     analysis.Ideographic,
 			},
@@ -16584,7 +16584,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			{
 				Start:    48,
 				End:      57,
-				Term:     []byte("孙悟空"),
+				Term:     []byte("孫悟空"),
 				Position: 14,
 				Type:     analysis.Ideographic,
 			},
@@ -16605,7 +16605,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			{
 				Start:    63,
 				End:      66,
-				Term:     []byte("爱"),
+				Term:     []byte("愛"),
 				Position: 17,
 				Type:     analysis.Ideographic,
 			},
@@ -16633,7 +16633,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			{
 				Start:    78,
 				End:      81,
-				Term:     []byte("爱"),
+				Term:     []byte("愛"),
 				Position: 21,
 				Type:     analysis.Ideographic,
 			},
@@ -16668,7 +16668,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 		},
 	},
 		{
-			[]byte("我不喜欢日本和服。"),
+			[]byte("我不喜歡日本和服。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -16687,7 +16687,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -16715,7 +16715,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("雷猴回归人间。"),
+			[]byte("雷猴回歸人間。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -16727,14 +16727,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("回归"),
+					Term:     []byte("回歸"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("人间"),
+					Term:     []byte("人間"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -16748,26 +16748,26 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作"),
+			[]byte("工信處女幹事每月經過下屬科室都要親口交代24口交換機等技術性器件的安裝工作"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("工信处"),
+					Term:     []byte("工信處"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("干事"),
+					Term:     []byte("幹事"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("女干事"),
+					Term:     []byte("女幹事"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -16781,14 +16781,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("经过"),
+					Term:     []byte("經過"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("下属"),
+					Term:     []byte("下屬"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -16816,7 +16816,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      54,
-					Term:     []byte("亲口"),
+					Term:     []byte("親口"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -16844,21 +16844,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    65,
 					End:      71,
-					Term:     []byte("交换"),
+					Term:     []byte("交換"),
 					Position: 14,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    68,
 					End:      74,
-					Term:     []byte("换机"),
+					Term:     []byte("換機"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    65,
 					End:      74,
-					Term:     []byte("交换机"),
+					Term:     []byte("交換機"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -16872,14 +16872,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    77,
 					End:      83,
-					Term:     []byte("技术"),
+					Term:     []byte("技術"),
 					Position: 18,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    77,
 					End:      86,
-					Term:     []byte("技术性"),
+					Term:     []byte("技術性"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
@@ -16900,7 +16900,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    95,
 					End:      101,
-					Term:     []byte("安装"),
+					Term:     []byte("安裝"),
 					Position: 22,
 					Type:     analysis.Ideographic,
 				},
@@ -16954,7 +16954,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("永和服装饰品有限公司"),
+			[]byte("永和服裝飾品有限公司"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -16966,14 +16966,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("饰品"),
+					Term:     []byte("飾品"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -17001,7 +17001,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我爱北京天安门"),
+			[]byte("我愛北京天安門"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -17013,7 +17013,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("爱"),
+					Term:     []byte("愛"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -17034,7 +17034,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("天安门"),
+					Term:     []byte("天安門"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -17053,12 +17053,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("隐马尔可夫"),
+			[]byte("隱馬爾可夫"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("隐"),
+					Term:     []byte("隱"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -17072,21 +17072,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      12,
-					Term:     []byte("马尔可"),
+					Term:     []byte("馬爾可"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    3,
 					End:      15,
-					Term:     []byte("马尔可夫"),
+					Term:     []byte("馬爾可夫"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("雷猴是个好网站"),
+			[]byte("雷猴是個好網站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -17105,7 +17105,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -17119,19 +17119,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("网站"),
+					Term:     []byte("網站"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("“Microsoft”一词由“MICROcomputer（微型计算机）”和“SOFTware（软件）”两部分组成"),
+			[]byte("「Microsoft」一詞由「MICROcomputer（微型計算機）」和「SOFTware（軟件）」兩部分組成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 1,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -17145,7 +17145,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 3,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -17159,7 +17159,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("词"),
+					Term:     []byte("詞"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -17173,7 +17173,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 7,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -17201,21 +17201,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    49,
 					End:      55,
-					Term:     []byte("计算"),
+					Term:     []byte("計算"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    52,
 					End:      58,
-					Term:     []byte("算机"),
+					Term:     []byte("算機"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    49,
 					End:      58,
-					Term:     []byte("计算机"),
+					Term:     []byte("計算機"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -17229,7 +17229,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      64,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 15,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -17243,7 +17243,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    67,
 					End:      70,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 17,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -17264,7 +17264,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    81,
 					End:      87,
-					Term:     []byte("软件"),
+					Term:     []byte("軟件"),
 					Position: 20,
 					Type:     analysis.Ideographic,
 				},
@@ -17278,14 +17278,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    90,
 					End:      93,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 22,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    93,
 					End:      96,
-					Term:     []byte("两"),
+					Term:     []byte("兩"),
 					Position: 23,
 					Type:     analysis.Ideographic,
 				},
@@ -17299,19 +17299,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    102,
 					End:      108,
-					Term:     []byte("组成"),
+					Term:     []byte("組成"),
 					Position: 25,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("草泥马和欺实马是今年的流行词汇"),
+			[]byte("草泥馬和欺實馬是今年的流行詞彙"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("草泥马"),
+					Term:     []byte("草泥馬"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -17332,14 +17332,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("实"),
+					Term:     []byte("實"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("马"),
+					Term:     []byte("馬"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -17374,14 +17374,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("词汇"),
+					Term:     []byte("詞彙"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("伊藤洋华堂总府店"),
+			[]byte("伊藤洋華堂總府店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -17400,14 +17400,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      15,
-					Term:     []byte("洋华堂"),
+					Term:     []byte("洋華堂"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("总府"),
+					Term:     []byte("總府"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -17421,40 +17421,40 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国科学院计算技术研究所"),
+			[]byte("中國科學院計算技術研究所"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("科学"),
+					Term:     []byte("科學"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("学院"),
+					Term:     []byte("學院"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("计算"),
+					Term:     []byte("計算"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("技术"),
+					Term:     []byte("技術"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -17468,7 +17468,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      15,
-					Term:     []byte("科学院"),
+					Term:     []byte("科學院"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -17482,40 +17482,40 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    0,
 					End:      36,
-					Term:     []byte("中国科学院计算技术研究所"),
+					Term:     []byte("中國科學院計算技術研究所"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("罗密欧与朱丽叶"),
+			[]byte("羅密歐與朱麗葉"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("罗密欧"),
+					Term:     []byte("羅密歐"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      12,
-					Term:     []byte("与"),
+					Term:     []byte("與"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("朱丽叶"),
+					Term:     []byte("朱麗葉"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我购买了道具和服装"),
+			[]byte("我購買了道具和服裝"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -17527,7 +17527,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("购买"),
+					Term:     []byte("購買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -17555,14 +17555,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("服装"),
+					Term:     []byte("服裝"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("PS: 我觉得开源有一个好处，就是能够敦促自己不断改进，避免敞帚自珍"),
+			[]byte("PS: 我覺得開源有一個好處，就是能夠敦促自己不斷改進，避免敞帚自珍"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -17595,14 +17595,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    7,
 					End:      13,
-					Term:     []byte("觉得"),
+					Term:     []byte("覺得"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("开源"),
+					Term:     []byte("開源"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -17616,14 +17616,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    28,
 					End:      34,
-					Term:     []byte("好处"),
+					Term:     []byte("好處"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -17644,7 +17644,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    43,
 					End:      49,
-					Term:     []byte("能够"),
+					Term:     []byte("能夠"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -17665,21 +17665,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    61,
 					End:      67,
-					Term:     []byte("不断"),
+					Term:     []byte("不斷"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    67,
 					End:      73,
-					Term:     []byte("改进"),
+					Term:     []byte("改進"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    61,
 					End:      73,
-					Term:     []byte("不断改进"),
+					Term:     []byte("不斷改進"),
 					Position: 17,
 					Type:     analysis.Ideographic,
 				},
@@ -17787,19 +17787,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("总经理完成了这件事情"),
+			[]byte("總經理完成了這件事情"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("经理"),
+					Term:     []byte("經理"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("总经理"),
+					Term:     []byte("總經理"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -17820,7 +17820,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -17834,12 +17834,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("电脑修好了"),
+			[]byte("電腦修好了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("电脑"),
+					Term:     []byte("電腦"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -17860,7 +17860,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("做好了这件事情就一了百了了"),
+			[]byte("做好了這件事情就一了百了了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -17879,7 +17879,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -17914,19 +17914,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("人们审美的观点是不同的"),
+			[]byte("人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -17940,7 +17940,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -17968,19 +17968,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我们买了一个美的空调"),
+			[]byte("我們買了一個美的空調"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -17994,7 +17994,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -18008,19 +18008,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("空调"),
+					Term:     []byte("空調"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("线程初始化时我们要注意"),
+			[]byte("線程初始化時我們要注意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("线程"),
+					Term:     []byte("線程"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18041,14 +18041,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("我们"),
+					Term:     []byte("我們"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -18069,12 +18069,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一个分子是由好多原子组织成的"),
+			[]byte("一個分子是由好多原子組織成的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18116,7 +18116,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("组织"),
+					Term:     []byte("組織"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -18137,7 +18137,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("祝你马到功成"),
+			[]byte("祝你馬到功成"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18156,14 +18156,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      18,
-					Term:     []byte("马到功成"),
+					Term:     []byte("馬到功成"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("他掉进了无底洞里"),
+			[]byte("他掉進了無底洞里"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18182,7 +18182,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("进"),
+					Term:     []byte("進"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -18196,14 +18196,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("无底"),
+					Term:     []byte("無底"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("无底洞"),
+					Term:     []byte("無底洞"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -18217,12 +18217,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("中国的首都是北京"),
+			[]byte("中國的首都是北京"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18257,12 +18257,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("孙君意"),
+			[]byte("孫君意"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("孙"),
+					Term:     []byte("孫"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18283,7 +18283,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("外交部发言人马朝旭"),
+			[]byte("外交部發言人馬朝旭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18302,47 +18302,47 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("发言"),
+					Term:     []byte("發言"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      18,
-					Term:     []byte("发言人"),
+					Term:     []byte("發言人"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("马朝旭"),
+					Term:     []byte("馬朝旭"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("领导人会议和第四届东亚峰会"),
+			[]byte("領導人會議和第四屆東亞峰會"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("领导"),
+					Term:     []byte("領導"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("领导人"),
+					Term:     []byte("領導人"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("会议"),
+					Term:     []byte("會議"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -18363,35 +18363,35 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("四届"),
+					Term:     []byte("四屆"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("第四届"),
+					Term:     []byte("第四屆"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("东亚"),
+					Term:     []byte("東亞"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("峰会"),
+					Term:     []byte("峰會"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("在过去的这五年"),
+			[]byte("在過去的這五年"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18403,7 +18403,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("过去"),
+					Term:     []byte("過去"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -18417,7 +18417,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("这"),
+					Term:     []byte("這"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -18431,12 +18431,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("还需要很长的路要走"),
+			[]byte("還需要很長的路要走"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18457,7 +18457,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("长"),
+					Term:     []byte("長"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -18492,7 +18492,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("60周年首都阅兵"),
+			[]byte("60週年首都閱兵"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18504,7 +18504,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      8,
-					Term:     []byte("周年"),
+					Term:     []byte("週年"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -18518,14 +18518,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    14,
 					End:      20,
-					Term:     []byte("阅兵"),
+					Term:     []byte("閱兵"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("你好人们审美的观点是不同的"),
+			[]byte("你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18537,14 +18537,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -18558,7 +18558,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -18586,12 +18586,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("买水果然后来世博园"),
+			[]byte("買水果然後來世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18605,14 +18605,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -18626,26 +18626,26 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("博园"),
+					Term:     []byte("博園"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("买水果然后去世博园"),
+			[]byte("買水果然後去世博園"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -18659,7 +18659,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -18680,21 +18680,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("博园"),
+					Term:     []byte("博園"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("世博园"),
+					Term:     []byte("世博園"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("但是后来我才知道你是对的"),
+			[]byte("但是後來我才知道你是對的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18706,7 +18706,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -18748,7 +18748,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("对"),
+					Term:     []byte("對"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -18898,7 +18898,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("I love你，不以为耻，反以为rong"),
+			[]byte("I love你，不以為恥，反以為rong"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -18945,14 +18945,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("以为"),
+					Term:     []byte("以為"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      24,
-					Term:     []byte("不以为耻"),
+					Term:     []byte("不以為恥"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -18973,7 +18973,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      36,
-					Term:     []byte("以为"),
+					Term:     []byte("以為"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -19003,7 +19003,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19022,14 +19022,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -19043,7 +19043,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -19071,7 +19071,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("很好但主要是基于网页形式"),
+			[]byte("很好但主要是基於網頁形式"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19111,14 +19111,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("基于"),
+					Term:     []byte("基於"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    24,
 					End:      30,
-					Term:     []byte("网页"),
+					Term:     []byte("網頁"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -19132,7 +19132,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("hello你好人们审美的观点是不同的"),
+			[]byte("hello你好人們審美的觀點是不同的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19151,14 +19151,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("人们"),
+					Term:     []byte("人們"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("审美"),
+					Term:     []byte("審美"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -19172,7 +19172,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    26,
 					End:      32,
-					Term:     []byte("观点"),
+					Term:     []byte("觀點"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -19200,19 +19200,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("为什么我不能拥有想要的生活"),
+			[]byte("為什麼我不能擁有想要的生活"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("什么"),
+					Term:     []byte("什麼"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("为什么"),
+					Term:     []byte("為什麼"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -19233,7 +19233,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("拥有"),
+					Term:     []byte("擁有"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -19261,12 +19261,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("后来我才"),
+			[]byte("後來我才"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("后来"),
+					Term:     []byte("後來"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -19287,7 +19287,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("此次来中国是为了"),
+			[]byte("此次來中國是為了"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19299,14 +19299,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("来"),
+					Term:     []byte("來"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("中国"),
+					Term:     []byte("中國"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -19320,14 +19320,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("使用了它就可以解决一些问题"),
+			[]byte("使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19367,7 +19367,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -19381,14 +19381,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte(",使用了它就可以解决一些问题"),
+			[]byte(",使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19435,7 +19435,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    22,
 					End:      28,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -19449,19 +19449,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    34,
 					End:      40,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("其实使用了它就可以解决一些问题"),
+			[]byte("其實使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("其实"),
+					Term:     []byte("其實"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -19503,7 +19503,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -19517,14 +19517,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("好人使用了它就可以解决一些问题"),
+			[]byte("好人使用了它就可以解決一些問題"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19571,7 +19571,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("解决"),
+					Term:     []byte("解決"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -19585,26 +19585,26 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("问题"),
+					Term:     []byte("問題"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("是因为和国家"),
+			[]byte("是因為和國家"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("因为"),
+					Term:     []byte("因為"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("是因为"),
+					Term:     []byte("是因為"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -19618,14 +19618,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("国家"),
+					Term:     []byte("國家"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("老年搜索还支持"),
+			[]byte("老年搜索還支持"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -19644,7 +19644,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      15,
-					Term:     []byte("还"),
+					Term:     []byte("還"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -19658,12 +19658,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("干脆就把那部蒙人的闲法给废了拉倒！RT @laoshipukong : 27日，全国人大常委会第三次审议侵权责任法草案，删除了有关医疗损害责任“举证倒置”的规定。在医患纠纷中本已处于弱势地位的消费者由此将陷入万劫不复的境地。 "),
+			[]byte("乾脆就把那部蒙人的閒法給廢了拉倒！RT @laoshipukong : 27日，全國人大常委會第三次審議侵權責任法草案，刪除了有關醫療損害責任「舉證倒置」的規定。在醫患糾紛中本已處於弱勢地位的消費者由此將陷入萬劫不復的境地。 "),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("干脆"),
+					Term:     []byte("乾脆"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -19719,7 +19719,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      30,
-					Term:     []byte("闲"),
+					Term:     []byte("閒"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -19733,14 +19733,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      36,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    36,
 					End:      39,
-					Term:     []byte("废"),
+					Term:     []byte("廢"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -19838,14 +19838,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    78,
 					End:      84,
-					Term:     []byte("全国"),
+					Term:     []byte("全國"),
 					Position: 26,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    81,
 					End:      87,
-					Term:     []byte("国人"),
+					Term:     []byte("國人"),
 					Position: 27,
 					Type:     analysis.Ideographic,
 				},
@@ -19866,21 +19866,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    93,
 					End:      99,
-					Term:     []byte("委会"),
+					Term:     []byte("委會"),
 					Position: 30,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    90,
 					End:      99,
-					Term:     []byte("常委会"),
+					Term:     []byte("常委會"),
 					Position: 31,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    78,
 					End:      99,
-					Term:     []byte("全国人大常委会"),
+					Term:     []byte("全國人大常委會"),
 					Position: 32,
 					Type:     analysis.Ideographic,
 				},
@@ -19908,28 +19908,28 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    108,
 					End:      114,
-					Term:     []byte("审议"),
+					Term:     []byte("審議"),
 					Position: 36,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    114,
 					End:      120,
-					Term:     []byte("侵权"),
+					Term:     []byte("侵權"),
 					Position: 37,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    120,
 					End:      126,
-					Term:     []byte("责任"),
+					Term:     []byte("責任"),
 					Position: 38,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    120,
 					End:      129,
-					Term:     []byte("责任法"),
+					Term:     []byte("責任法"),
 					Position: 39,
 					Type:     analysis.Ideographic,
 				},
@@ -19950,7 +19950,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    138,
 					End:      144,
-					Term:     []byte("删除"),
+					Term:     []byte("刪除"),
 					Position: 42,
 					Type:     analysis.Ideographic,
 				},
@@ -19964,42 +19964,42 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    147,
 					End:      153,
-					Term:     []byte("有关"),
+					Term:     []byte("有關"),
 					Position: 44,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    153,
 					End:      159,
-					Term:     []byte("医疗"),
+					Term:     []byte("醫療"),
 					Position: 45,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    159,
 					End:      165,
-					Term:     []byte("损害"),
+					Term:     []byte("損害"),
 					Position: 46,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    165,
 					End:      171,
-					Term:     []byte("责任"),
+					Term:     []byte("責任"),
 					Position: 47,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    171,
 					End:      174,
-					Term:     []byte("“"),
+					Term:     []byte("「"),
 					Position: 48,
 					Type:     analysis.AlphaNumeric,
 				},
 				{
 					Start:    174,
 					End:      180,
-					Term:     []byte("举证"),
+					Term:     []byte("舉證"),
 					Position: 49,
 					Type:     analysis.Ideographic,
 				},
@@ -20013,7 +20013,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    186,
 					End:      189,
-					Term:     []byte("”"),
+					Term:     []byte("」"),
 					Position: 51,
 					Type:     analysis.AlphaNumeric,
 				},
@@ -20027,7 +20027,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    192,
 					End:      198,
-					Term:     []byte("规定"),
+					Term:     []byte("規定"),
 					Position: 53,
 					Type:     analysis.Ideographic,
 				},
@@ -20048,14 +20048,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    204,
 					End:      210,
-					Term:     []byte("医患"),
+					Term:     []byte("醫患"),
 					Position: 56,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    210,
 					End:      216,
-					Term:     []byte("纠纷"),
+					Term:     []byte("糾紛"),
 					Position: 57,
 					Type:     analysis.Ideographic,
 				},
@@ -20083,14 +20083,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    225,
 					End:      231,
-					Term:     []byte("处于"),
+					Term:     []byte("處於"),
 					Position: 61,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    231,
 					End:      237,
-					Term:     []byte("弱势"),
+					Term:     []byte("弱勢"),
 					Position: 62,
 					Type:     analysis.Ideographic,
 				},
@@ -20111,14 +20111,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    246,
 					End:      252,
-					Term:     []byte("消费"),
+					Term:     []byte("消費"),
 					Position: 65,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    246,
 					End:      255,
-					Term:     []byte("消费者"),
+					Term:     []byte("消費者"),
 					Position: 66,
 					Type:     analysis.Ideographic,
 				},
@@ -20132,7 +20132,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    261,
 					End:      264,
-					Term:     []byte("将"),
+					Term:     []byte("將"),
 					Position: 68,
 					Type:     analysis.Ideographic,
 				},
@@ -20146,14 +20146,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    276,
 					End:      282,
-					Term:     []byte("不复"),
+					Term:     []byte("不復"),
 					Position: 70,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    270,
 					End:      282,
-					Term:     []byte("万劫不复"),
+					Term:     []byte("萬劫不復"),
 					Position: 71,
 					Type:     analysis.Ideographic,
 				},
@@ -20204,7 +20204,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			analysis.TokenStream{},
 		},
 		{
-			[]byte("他说的确实在理"),
+			[]byte("他說的確實在理"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -20216,7 +20216,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      6,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -20230,7 +20230,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("确实"),
+					Term:     []byte("確實"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -20251,45 +20251,45 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春节讲话"),
+			[]byte("長春市長春節講話"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("市长"),
+					Term:     []byte("市長"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("春节"),
+					Term:     []byte("春節"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("讲话"),
+					Term:     []byte("講話"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("结婚的和尚未结婚的"),
+			[]byte("結婚的和尚未結婚的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -20317,7 +20317,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("结婚"),
+					Term:     []byte("結婚"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -20331,12 +20331,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("结合成分子时"),
+			[]byte("結合成分子時"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("结合"),
+					Term:     []byte("結合"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -20357,19 +20357,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      18,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("旅游和服务是最好的"),
+			[]byte("旅遊和服務是最好的"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("旅游"),
+					Term:     []byte("旅遊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -20383,7 +20383,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("服务"),
+					Term:     []byte("服務"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -20411,12 +20411,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("这件事情的确是我的错"),
+			[]byte("這件事情的確是我的錯"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("这件"),
+					Term:     []byte("這件"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -20430,7 +20430,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("的确"),
+					Term:     []byte("的確"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -20458,14 +20458,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      30,
-					Term:     []byte("错"),
+					Term:     []byte("錯"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("供大家参考指正"),
+			[]byte("供大家參考指正"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -20484,7 +20484,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("参考"),
+					Term:     []byte("參考"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -20498,19 +20498,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("哈尔滨政府公布塌桥原因"),
+			[]byte("哈爾濱政府公佈塌橋原因"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("哈尔"),
+					Term:     []byte("哈爾"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("哈尔滨"),
+					Term:     []byte("哈爾濱"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -20524,7 +20524,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("公布"),
+					Term:     []byte("公佈"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -20538,7 +20538,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("桥"),
+					Term:     []byte("橋"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -20552,7 +20552,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("我在机场入口处"),
+			[]byte("我在機場入口處"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -20571,7 +20571,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("机场"),
+					Term:     []byte("機場"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -20585,14 +20585,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      21,
-					Term:     []byte("入口处"),
+					Term:     []byte("入口處"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邢永臣摄影报道"),
+			[]byte("邢永臣攝影報道"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -20618,21 +20618,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("摄影"),
+					Term:     []byte("攝影"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("报道"),
+					Term:     []byte("報道"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("BP神经网络如何训练才能在分类时增加区分度？"),
+			[]byte("BP神經網絡如何訓練才能在分類時增加區分度？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -20644,28 +20644,28 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    2,
 					End:      8,
-					Term:     []byte("神经"),
+					Term:     []byte("神經"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    8,
 					End:      14,
-					Term:     []byte("网络"),
+					Term:     []byte("網絡"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    2,
 					End:      11,
-					Term:     []byte("神经网"),
+					Term:     []byte("神經網"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    2,
 					End:      14,
-					Term:     []byte("神经网络"),
+					Term:     []byte("神經網絡"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -20679,7 +20679,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    20,
 					End:      26,
-					Term:     []byte("训练"),
+					Term:     []byte("訓練"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -20700,14 +20700,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    35,
 					End:      41,
-					Term:     []byte("分类"),
+					Term:     []byte("分類"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    41,
 					End:      44,
-					Term:     []byte("时"),
+					Term:     []byte("時"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -20721,7 +20721,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    50,
 					End:      56,
-					Term:     []byte("区分"),
+					Term:     []byte("區分"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -20735,7 +20735,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    50,
 					End:      59,
-					Term:     []byte("区分度"),
+					Term:     []byte("區分度"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -20749,7 +20749,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("南京市长江大桥"),
+			[]byte("南京市長江大橋"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -20775,33 +20775,33 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("长江"),
+					Term:     []byte("長江"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("大桥"),
+					Term:     []byte("大橋"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      21,
-					Term:     []byte("长江大桥"),
+					Term:     []byte("長江大橋"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("应一些使用者的建议，也为了便于利用NiuTrans用于SMT研究"),
+			[]byte("應一些使用者的建議，也為了便於利用NiuTrans用於SMT研究"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("应"),
+					Term:     []byte("應"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -20843,7 +20843,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("建议"),
+					Term:     []byte("建議"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -20864,14 +20864,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("为了"),
+					Term:     []byte("為了"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    39,
 					End:      45,
-					Term:     []byte("便于"),
+					Term:     []byte("便於"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -20892,7 +20892,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    59,
 					End:      65,
-					Term:     []byte("用于"),
+					Term:     []byte("用於"),
 					Position: 14,
 					Type:     analysis.Ideographic,
 				},
@@ -20913,45 +20913,45 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("长春市长春药店"),
+			[]byte("長春市長春藥店"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("长春市"),
+					Term:     []byte("長春市"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("长春"),
+					Term:     []byte("長春"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("药店"),
+					Term:     []byte("藥店"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("邓颖超生前最喜欢的衣服"),
+			[]byte("鄧穎超生前最喜歡的衣服"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("邓颖超"),
+					Term:     []byte("鄧穎超"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -20972,7 +20972,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("喜欢"),
+					Term:     []byte("喜歡"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -20993,19 +20993,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("胡锦涛是热爱世界和平的政治局常委"),
+			[]byte("胡錦濤是熱愛世界和平的政治局常委"),
 			analysis.TokenStream{
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("锦涛"),
+					Term:     []byte("錦濤"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("胡锦涛"),
+					Term:     []byte("胡錦濤"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -21019,7 +21019,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    12,
 					End:      18,
-					Term:     []byte("热爱"),
+					Term:     []byte("熱愛"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -21068,7 +21068,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("程序员祝海林和朱会震是在孙健的左面和右面, 范凯在最右面.再往左是李松洪"),
+			[]byte("程序員祝海林和朱會震是在孫健的左面和右面, 範凱在最右面.再往左是李松洪"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -21080,7 +21080,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("程序员"),
+					Term:     []byte("程序員"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -21115,7 +21115,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    24,
 					End:      27,
-					Term:     []byte("会"),
+					Term:     []byte("會"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -21143,7 +21143,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      39,
-					Term:     []byte("孙"),
+					Term:     []byte("孫"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -21199,14 +21199,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    62,
 					End:      65,
-					Term:     []byte("范"),
+					Term:     []byte("範"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    65,
 					End:      68,
-					Term:     []byte("凯"),
+					Term:     []byte("凱"),
 					Position: 20,
 					Type:     analysis.Ideographic,
 				},
@@ -21290,7 +21290,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("一次性交多少钱"),
+			[]byte("一次性交多少錢"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -21323,19 +21323,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      21,
-					Term:     []byte("钱"),
+					Term:     []byte("錢"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("两块五一套，三块八一斤，四块七一本，五块六一条"),
+			[]byte("兩塊五一套，三塊八一斤，四塊七一本，五塊六一條"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("两块"),
+					Term:     []byte("兩塊"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -21363,7 +21363,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("三块"),
+					Term:     []byte("三塊"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -21391,7 +21391,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    36,
 					End:      42,
-					Term:     []byte("四块"),
+					Term:     []byte("四塊"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -21419,7 +21419,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    54,
 					End:      60,
-					Term:     []byte("五块"),
+					Term:     []byte("五塊"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -21433,14 +21433,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("一条"),
+					Term:     []byte("一條"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("小和尚留了一个像大和尚一样的和尚头"),
+			[]byte("小和尚留了一個像大和尚一樣的和尚頭"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -21473,7 +21473,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("一个"),
+					Term:     []byte("一個"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
@@ -21501,7 +21501,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    33,
 					End:      39,
-					Term:     []byte("一样"),
+					Term:     []byte("一樣"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -21522,14 +21522,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      51,
-					Term:     []byte("和尚头"),
+					Term:     []byte("和尚頭"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("我是中华人民共和国公民;我爸爸是共和党党员; 地铁和平门站"),
+			[]byte("我是中華人民共和國公民;我爸爸是共和黨黨員; 地鐵和平門站"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -21548,14 +21548,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      12,
-					Term:     []byte("中华"),
+					Term:     []byte("中華"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("华人"),
+					Term:     []byte("華人"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -21576,14 +21576,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      27,
-					Term:     []byte("共和国"),
+					Term:     []byte("共和國"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    6,
 					End:      27,
-					Term:     []byte("中华人民共和国"),
+					Term:     []byte("中華人民共和國"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -21632,14 +21632,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      55,
-					Term:     []byte("共和党"),
+					Term:     []byte("共和黨"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    55,
 					End:      61,
-					Term:     []byte("党员"),
+					Term:     []byte("黨員"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -21660,7 +21660,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    63,
 					End:      69,
-					Term:     []byte("地铁"),
+					Term:     []byte("地鐵"),
 					Position: 19,
 					Type:     analysis.Ideographic,
 				},
@@ -21674,7 +21674,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    69,
 					End:      78,
-					Term:     []byte("和平门"),
+					Term:     []byte("和平門"),
 					Position: 21,
 					Type:     analysis.Ideographic,
 				},
@@ -21688,12 +21688,12 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("张晓梅去人民医院做了个B超然后去买了件T恤"),
+			[]byte("張曉梅去人民醫院做了個B超然後去買了件T恤"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("张晓梅"),
+					Term:     []byte("張曉梅"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -21714,7 +21714,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    18,
 					End:      24,
-					Term:     []byte("医院"),
+					Term:     []byte("醫院"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -21735,7 +21735,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("个"),
+					Term:     []byte("個"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
@@ -21749,7 +21749,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      43,
-					Term:     []byte("然后"),
+					Term:     []byte("然後"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -21763,7 +21763,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    46,
 					End:      49,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
@@ -21791,7 +21791,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("AT&T是一件不错的公司，给你发offer了吗？"),
+			[]byte("AT&T是一件不錯的公司，給你發offer了嗎？"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -21817,7 +21817,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      19,
-					Term:     []byte("不错"),
+					Term:     []byte("不錯"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -21845,7 +21845,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    31,
 					End:      34,
-					Term:     []byte("给"),
+					Term:     []byte("給"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -21859,7 +21859,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    37,
 					End:      40,
-					Term:     []byte("发"),
+					Term:     []byte("發"),
 					Position: 10,
 					Type:     analysis.Ideographic,
 				},
@@ -21880,7 +21880,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      51,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -21894,7 +21894,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("C++和c#是什么关系？11+122=133，是吗？PI=3.14159"),
+			[]byte("C++和c#是什麼關係？11+122=133，是嗎？PI=3.14159"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -21927,14 +21927,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    11,
 					End:      17,
-					Term:     []byte("什么"),
+					Term:     []byte("什麼"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    17,
 					End:      23,
-					Term:     []byte("关系"),
+					Term:     []byte("關係"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -21997,7 +21997,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    42,
 					End:      45,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 15,
 					Type:     analysis.Ideographic,
 				},
@@ -22046,7 +22046,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("你认识那个和主席握手的的哥吗？他开一辆黑色的士。"),
+			[]byte("你認識那個和主席握手的的哥嗎？他開一輛黑色的士。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -22058,14 +22058,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("认识"),
+					Term:     []byte("認識"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("那个"),
+					Term:     []byte("那個"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -22107,7 +22107,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("吗"),
+					Term:     []byte("嗎"),
 					Position: 9,
 					Type:     analysis.Ideographic,
 				},
@@ -22128,14 +22128,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    48,
 					End:      51,
-					Term:     []byte("开"),
+					Term:     []byte("開"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    51,
 					End:      57,
-					Term:     []byte("一辆"),
+					Term:     []byte("一輛"),
 					Position: 13,
 					Type:     analysis.Ideographic,
 				},
@@ -22163,26 +22163,26 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("枪杆子中出政权"),
+			[]byte("槍桿子中出政權"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      6,
-					Term:     []byte("枪杆"),
+					Term:     []byte("槍桿"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    3,
 					End:      9,
-					Term:     []byte("杆子"),
+					Term:     []byte("桿子"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    0,
 					End:      9,
-					Term:     []byte("枪杆子"),
+					Term:     []byte("槍桿子"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
@@ -22203,19 +22203,19 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    15,
 					End:      21,
-					Term:     []byte("政权"),
+					Term:     []byte("政權"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("张三风同学走上了不归路"),
+			[]byte("張三風同學走上了不歸路"),
 			analysis.TokenStream{
 				{
 					Start:    0,
 					End:      3,
-					Term:     []byte("张"),
+					Term:     []byte("張"),
 					Position: 1,
 					Type:     analysis.Ideographic,
 				},
@@ -22229,14 +22229,14 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    6,
 					End:      9,
-					Term:     []byte("风"),
+					Term:     []byte("風"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    9,
 					End:      15,
-					Term:     []byte("同学"),
+					Term:     []byte("同學"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -22257,21 +22257,21 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    27,
 					End:      33,
-					Term:     []byte("归路"),
+					Term:     []byte("歸路"),
 					Position: 7,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    24,
 					End:      33,
-					Term:     []byte("不归路"),
+					Term:     []byte("不歸路"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
 			},
 		},
 		{
-			[]byte("阿Q腰间挂着BB机手里拿着大哥大，说：我一般吃饭不AA制的。"),
+			[]byte("阿Q腰間掛著BB機手裡拿著大哥大，說：我一般吃飯不AA制的。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -22283,35 +22283,35 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    4,
 					End:      10,
-					Term:     []byte("腰间"),
+					Term:     []byte("腰間"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    10,
 					End:      13,
-					Term:     []byte("挂"),
+					Term:     []byte("掛"),
 					Position: 3,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    16,
 					End:      21,
-					Term:     []byte("BB机"),
+					Term:     []byte("BB機"),
 					Position: 5,
 					Type:     analysis.Ideographic,
 				},
 				{
 					Start:    21,
 					End:      27,
-					Term:     []byte("手里"),
+					Term:     []byte("手裡"),
 					Position: 6,
 					Type:     analysis.Ideographic,
 				},
@@ -22325,7 +22325,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    30,
 					End:      33,
-					Term:     []byte("着"),
+					Term:     []byte("著"),
 					Position: 8,
 					Type:     analysis.Ideographic,
 				},
@@ -22353,7 +22353,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    45,
 					End:      48,
-					Term:     []byte("说"),
+					Term:     []byte("說"),
 					Position: 12,
 					Type:     analysis.Ideographic,
 				},
@@ -22381,7 +22381,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    60,
 					End:      66,
-					Term:     []byte("吃饭"),
+					Term:     []byte("吃飯"),
 					Position: 16,
 					Type:     analysis.Ideographic,
 				},
@@ -22416,7 +22416,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 			},
 		},
 		{
-			[]byte("在1号店能买到小S和大S八卦的书。"),
+			[]byte("在1號店能買到小S和大S八卦的書。"),
 			analysis.TokenStream{
 				{
 					Start:    0,
@@ -22428,7 +22428,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    3,
 					End:      10,
-					Term:     []byte("1号店"),
+					Term:     []byte("1號店"),
 					Position: 2,
 					Type:     analysis.Ideographic,
 				},
@@ -22442,7 +22442,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    13,
 					End:      16,
-					Term:     []byte("买"),
+					Term:     []byte("買"),
 					Position: 4,
 					Type:     analysis.Ideographic,
 				},
@@ -22491,7 +22491,7 @@ func TestJiebaTokenizerSearchModeWithoutHMM(t *testing.T) {
 				{
 					Start:    39,
 					End:      42,
-					Term:     []byte("书"),
+					Term:     []byte("書"),
 					Position: 11,
 					Type:     analysis.Ideographic,
 				},
