@@ -704,6 +704,8 @@ func TestCutForSearch(t *testing.T) {
 	for index, content := range testContents {
 		result = chanToArray(seg.CutForSearch(content, true))
 		if len(result) != len(cutForSearchResult[index]) {
+			t.Logf("expect %v\n", cutForSearchResult[index])
+			t.Logf("got %v\n", result)
 			t.Fatalf("cut for search for %s length should be %d not %d\n",
 				content, len(cutForSearchResult[index]), len(result))
 		}

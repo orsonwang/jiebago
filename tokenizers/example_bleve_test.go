@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/blevesearch/bleve"
-	"jiebago/tokenizers"
+	_ "jiebago/tokenizers"
 )
 
 func Example_beleveSearch() {
