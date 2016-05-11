@@ -2,6 +2,7 @@
 package jiebago
 
 import (
+	//	"fmt"
 	"math"
 	"regexp"
 	"strings"
@@ -105,6 +106,7 @@ func (seg *Segmenter) LoadUserDictionary(fileName string) error {
 	return seg.dict.loadDictionary(fileName)
 }
 
+// 把輸入字串搜尋出字典裡每個可能的字組組合後回傳所有組合的詞頻
 func (seg *Segmenter) dag(runes []rune) map[int][]int {
 	dag := make(map[int][]int)
 	n := len(runes)
@@ -119,13 +121,14 @@ func (seg *Segmenter) dag(runes []rune) map[int][]int {
 			if !ok {
 				break
 			}
-			if freq > 0.0 {
+			if freq > 0.0 { // 0 means deleted as dict(channel) is hard to delete word
 				dag[k] = append(dag[k], i)
 			}
 			i++
 			if i >= n {
 				break
 			}
+			//			fmt.Printf("word: %v Freq: %f \n", string(frag), freq)
 			frag = runes[k : i+1]
 		}
 		if len(dag[k]) == 0 {
@@ -140,6 +143,7 @@ type route struct {
 	index     int
 }
 
+// calculate word frequency from end to beginning
 func (seg *Segmenter) calc(runes []rune) map[int]route {
 	dag := seg.dag(runes)
 	n := len(runes)
@@ -148,9 +152,12 @@ func (seg *Segmenter) calc(runes []rune) map[int]route {
 	var r route
 	for idx := n - 1; idx >= 0; idx-- {
 		for _, i := range dag[idx] {
+			//			fmt.Printf("Word: %v\n", string(runes[idx:i+1]))
 			if freq, ok := seg.dict.Frequency(string(runes[idx : i+1])); ok {
+				//				fmt.Printf("i: %d, idx: %d, freq: %f, freq1: %f", i, idx, freq, rs[i+1].frequency)
 				r = route{frequency: math.Log(freq) - seg.dict.logTotal + rs[i+1].frequency, index: i}
 			} else {
+				//				fmt.Printf("i: %d, idx: %d, freq: %f, freq1: %f", i, idx, freq, rs[i+1].frequency)
 				r = route{frequency: math.Log(1.0) - seg.dict.logTotal + rs[i+1].frequency, index: i}
 			}
 			if v, ok := rs[idx]; !ok {
@@ -178,11 +185,13 @@ func (seg *Segmenter) cutDAG(sentence string) <-chan string {
 		for x := 0; x < length; {
 			y = routes[x].index + 1
 			frag := runes[x:y]
+			//			fmt.Println("frag:" + string(frag))
 			if y-x == 1 {
 				buf = append(buf, frag...)
 			} else {
 				if len(buf) > 0 {
 					bufString := string(buf)
+					//					fmt.Println("Word: " + bufString)
 					if len(buf) == 1 {
 						result <- bufString
 					} else {
@@ -272,16 +281,19 @@ func (seg *Segmenter) Cut(sentence string, hmm bool) <-chan string {
 
 	go func() {
 		for _, block := range util.RegexpSplit(reHanDefault, sentence, -1) {
+			//			fmt.Printf("String: %v \n", block)
 			if len(block) == 0 {
 				continue
 			}
 			if reHanDefault.MatchString(block) {
+				//				fmt.Printf("String: %v \n", block)
 				for x := range cut(block) {
 					result <- x
 				}
 				continue
 			}
 			for _, subBlock := range util.RegexpSplit(reSkipDefault, block, -1) {
+				//				fmt.Printf("subString: %v \n", subBlock)
 				if reSkipDefault.MatchString(subBlock) {
 					result <- subBlock
 					continue
